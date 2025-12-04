@@ -14,11 +14,11 @@ main:
   - title: "Research"
     url: /research/
 
-  - title: "Vitae"
+  - title: "Curriculum Vitae"
     url: /files/CV_Yonggeun_Jung.pdf
 
-  - title: "Useful"
-    url: /links/  # 마이크로 데이터, USA trade online, OECD, KITA, UN Comtrade, Google Earth eigen etc
+  #- title: "Useful"
+  #  url: /links/  # 마이크로 데이터, USA trade online, OECD, KITA, UN Comtrade, Google Earth eigen etc
 
   #- title: "Blog"
   #  url: https://brunch.co.kr/@yuriijung    
