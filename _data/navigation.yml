@@ -8,13 +8,13 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:
-  - title: "Home"
+  - title: "home"
     url: /
 
-  - title: "Research"
+  - title: "research"
     url: /research/
 
-  - title: "Curriculum Vitae"
+  - title: "curriculum vitae"
     url: /files/CV_Yonggeun_Jung.pdf
 
   #- title: "Useful"
@@ -23,6 +23,6 @@ main:
   #- title: "Blog"
   #  url: https://brunch.co.kr/@yuriijung    
 
-  - title: "Personal"
+  - title: "personal"
     url: /personal/   
     
