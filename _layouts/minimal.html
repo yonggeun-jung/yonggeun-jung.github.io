@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title != nil and page.title != '' %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/minimal-theme.css' | relative_url }}">
+  <!-- ORCID & Google Scholar icons: Academicons (https://jpswalsh.github.io/academicons/) — font-based; Scholar uses the project’s classic “mortarboard” mark. -->
   <link rel="stylesheet" href="{{ '/assets/css/academicons.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/minimal-home.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/minimal-publications.css' | relative_url }}">
@@ -17,25 +18,30 @@
     <header class="site-sidebar">
       <h1 class="site-name">{{ site.author.name }}</h1>
       <p class="site-photo">
-        <img src="{{ '/images/' | append: site.author.avatar | relative_url }}" alt="{{ site.author.name }}" width="200" height="200">
+        <img src="{{ '/images/' | append: site.author.avatar | relative_url }}" alt="{{ site.author.name }}" width="280" height="280">
       </p>
       <p class="site-affil">{{ site.author.employer }}</p>
-      {% if site.author.tagline %}<p class="site-tagline">{{ site.author.tagline }}</p>{% endif %}
-      {% if site.author.verse %}<p class="site-verse">{{ site.author.verse }}</p>{% endif %}
+      {% if site.author.tagline or site.author.verse %}
+      <p class="site-econ-verse">
+        {% if site.author.tagline %}<span class="site-econ">{{ site.author.tagline }}</span>{% endif %}
+        {% if site.author.tagline and site.author.verse %} <span class="site-econ-verse-sep">&nbsp;</span> {% endif %}
+        {% if site.author.verse %}<span class="site-verse-inline">{{ site.author.verse }}</span>{% endif %}
+      </p>
+      {% endif %}
 
       <p class="site-icon-row">
         {% if site.author.orcid %}
-          <a href="{{ site.author.orcid }}" class="site-icon-link" title="ORCID" rel="noopener"><i class="ai ai-orcid ai-2x" aria-hidden="true"></i><span class="visually-hidden">ORCID</span></a>
+          <a href="{{ site.author.orcid }}" class="site-icon-link site-icon-orcid" title="ORCID" rel="noopener"><i class="ai ai-orcid" aria-hidden="true"></i><span class="visually-hidden">ORCID</span></a>
         {% endif %}
         {% if site.author.googlescholar %}
-          <a href="{{ site.author.googlescholar }}" class="site-icon-link" title="Google Scholar" rel="noopener"><i class="ai ai-google-scholar ai-2x" aria-hidden="true"></i><span class="visually-hidden">Google Scholar</span></a>
+          <a href="{{ site.author.googlescholar }}" class="site-icon-link site-icon-scholar" title="Google Scholar" rel="noopener"><i class="ai ai-google-scholar" aria-hidden="true"></i><span class="visually-hidden">Google Scholar</span></a>
         {% endif %}
         {% if site.author.github %}
           <a href="https://github.com/{{ site.author.github }}" class="site-icon-link site-icon-github" title="GitHub" rel="noopener">{% include icon-github.html %}<span class="visually-hidden">GitHub</span></a>
         {% endif %}
       </p>
 
-      <p class="site-email"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
+      <p class="site-email"><a class="mail-link" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
     </header>
 
     <section class="site-main">

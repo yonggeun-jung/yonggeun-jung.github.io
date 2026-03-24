@@ -15,26 +15,23 @@ body.minimal-site {
   padding: 40px 36px 60px;
 }
 
-.minimal-site a {
-  color: #0f766e;
+/* All hyperlinks: bolder on hover (icons may shift slightly) */
+body.minimal-site a:hover {
+  font-weight: 600;
 }
 
-.minimal-site a:hover {
-  color: #0d5c56;
-}
-
-/* Left column — name first, then photo (orderedlist header is fixed-left) */
+/* Left column — name first, then photo */
 header.site-sidebar {
   width: 270px;
 }
 
 header.site-sidebar h1.site-name {
-  font-size: 1.65rem;
+  font-size: 2.05rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   color: #1e293b;
   margin: 0 0 14px;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 .site-photo {
@@ -44,31 +41,33 @@ header.site-sidebar h1.site-name {
 .site-photo img {
   display: block;
   width: 100%;
-  max-width: 200px;
+  max-width: 280px;
   height: auto;
   border-radius: 6px;
 }
 
 .site-affil {
-  margin: 0 0 6px !important;
+  margin: 0 0 8px !important;
   font-size: 0.95rem;
   color: #475569;
   line-height: 1.35;
 }
 
-.site-tagline {
-  margin: 0 0 4px !important;
-  font-size: 0.95rem;
+/* Economics + verse on one line; Economics not bold */
+.site-econ-verse {
+  margin: 0 0 12px !important;
+  font-size: 0.92rem;
+  line-height: 1.45;
   color: #334155;
-  font-weight: 500;
 }
 
-.site-verse {
-  margin: 0 0 12px !important;
-  font-size: 0.88rem;
+.site-econ {
+  font-weight: 400;
+}
+
+.site-verse-inline {
   color: #64748b;
   font-style: italic;
-  line-height: 1.35;
 }
 
 .site-icon-row {
@@ -77,18 +76,43 @@ header.site-sidebar h1.site-name {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.5rem 0.75rem;
+}
+
+.site-icon-row .ai {
+  font-size: 1.05rem;
 }
 
 .site-icon-link {
-  color: #0f766e;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 
-.site-icon-link:hover {
-  color: #0d5c56;
+/* Brand identity colors */
+.site-icon-orcid {
+  color: #a6ce39 !important;
+}
+
+.site-icon-orcid:hover {
+  color: #8fb82d !important;
+}
+
+.site-icon-scholar {
+  color: #4285f4 !important;
+}
+
+.site-icon-scholar:hover {
+  color: #3367d6 !important;
+}
+
+.site-icon-github {
+  color: #24292f !important;
+}
+
+.site-icon-github:hover {
+  color: #000 !important;
 }
 
 .site-icon-github .github-icon {
@@ -100,10 +124,16 @@ header.site-sidebar h1.site-name {
   line-height: 1.25 !important;
 }
 
-.site-email a {
+.mail-link {
   font-size: 0.82rem;
   font-family: ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
   word-break: break-all;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.mail-link:hover {
+  color: #004999;
 }
 
 .visually-hidden {
@@ -118,7 +148,7 @@ header.site-sidebar h1.site-name {
   border: 0;
 }
 
-/* Main column — typography */
+/* Main column */
 section.site-main {
   font-size: 15px;
   color: #3f4a5a;
@@ -132,18 +162,28 @@ section.site-main strong {
   color: #1e293b;
 }
 
+/* Home | CV | Personal — light red */
 .home-nav-center {
   text-align: center;
   margin: 1.1rem 0 1.25rem;
   font-size: 0.95rem;
 }
 
-.home-nav-center .nav-sep {
-  margin: 0 0.5em;
-  color: #94a3b8;
+.nav-site-link {
+  color: #e57373;
+  text-decoration: none;
 }
 
-/* Footer: full width below columns, not fixed corner */
+.nav-site-link:hover {
+  color: #d65a5a;
+}
+
+.home-nav-center .nav-sep {
+  margin: 0 0.5em;
+  color: #cbd5e1;
+}
+
+/* Footer */
 footer.site-footer-minimal {
   position: static !important;
   float: none !important;
@@ -159,6 +199,10 @@ footer.site-footer-minimal p {
   margin: 0 0 0.5em;
 }
 
+footer.site-footer-minimal a {
+  color: #0066cc;
+}
+
 @media print, screen and (max-width: 960px) {
   body.minimal-site {
     padding: 24px 18px 40px;
@@ -169,6 +213,6 @@ footer.site-footer-minimal p {
   }
 
   header.site-sidebar h1.site-name {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 }

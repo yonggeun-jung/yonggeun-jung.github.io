@@ -19,6 +19,12 @@ Included files (from that project):
 
 ---
 
+## Icons (sidebar)
+
+**ORCID** and **Google Scholar** use [Academicons](https://jpswalsh.github.io/academicons/) (open-source font icons for academia). The Google Scholar icon is that project’s classic “mortarboard” style, which can look older than Google’s current product branding. Colors on this site follow each service’s common identity (ORCID green, Google blue, GitHub dark). **GitHub** uses the standard Octocat-style SVG.
+
+---
+
 ## Other
 
 The repository began from the **Academic Pages** / **Minimal Mistakes** Jekyll stack; unused template pages have been removed over time. Remaining theme code in `_sass/`, `_layouts/default.html`, etc., reflects that lineage.
