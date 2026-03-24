@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{% if site.locale %}{{ site.locale | slice: 0, 2 }}{% else %}en{% endif %}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title != nil and page.title != '' %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/minimal-theme.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/minimal-publications.css' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon-180x180.png' | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ '/images/favicon-32x32.png' | relative_url }}" sizes="32x32">
+  <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <p class="site-thumb"><img src="{{ '/images/' | append: site.author.avatar | relative_url }}" alt="{{ site.author.name }}" width="120" height="120"></p>
+      <h1>{{ site.author.name }}</h1>
+      <p>{{ site.author.employer }}{% if site.author.bio %}<br>{{ site.author.bio }}{% endif %}</p>
+      <p class="meta-links">
+        {% if site.author.orcid %}<a href="{{ site.author.orcid }}">ORCID</a>{% endif %}
+        {% if site.author.googlescholar %} &nbsp;|&nbsp; <a href="{{ site.author.googlescholar }}">Google Scholar</a>{% endif %}
+        {% if site.author.github %} &nbsp;|&nbsp; <a href="https://github.com/{{ site.author.github }}">GitHub</a>{% endif %}
+      </p>
+      <p><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
+      <p class="site-nav">
+        <a href="{{ '/' | relative_url }}">Home</a> &nbsp;|&nbsp;
+        <a href="{{ '/files/CV_Yonggeun_Jung.pdf' | relative_url }}">CV</a> &nbsp;|&nbsp;
+        <a href="{{ '/personal/' | relative_url }}">Personal</a>
+      </p>
+    </header>
+    <section>
+      {{ content }}
+    </section>
+    <footer class="site-footer-minimal">
+      <p><small>Hosted on GitHub Pages.</small></p>
+      <p><small>
+        Layout and styles are adapted from
+        <a href="https://github.com/orderedlist/minimal" rel="noopener">Minimal</a>
+        by <a href="https://github.com/orderedlist" rel="noopener">Steve Smith</a> (orderedlist),
+        used under
+        <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener">CC&nbsp;BY-SA&nbsp;3.0</a>.
+        <a href="{{ '/attribution/' | relative_url }}">Full credits</a>
+      </small></p>
+    </footer>
+  </div>
+  <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+</body>
+</html>

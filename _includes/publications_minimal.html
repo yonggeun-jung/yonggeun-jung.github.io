@@ -1,0 +1,40 @@
+<div class="publication-section">
+
+  <h2 class="section-title">Publications and Working papers</h2>
+  <hr class="subtle-hr" />
+
+  {% for pub in site.data.publications %}
+    <div class="pub-card">
+      <p class="pub-title">{{ pub.citation }}</p>
+      <div class="btn-row">
+        {% if pub.abstract %}
+          <details class="abs-details">
+            <summary class="rbtn-summary" aria-controls="abs-{{ forloop.index }}">Abstract</summary>
+            <div id="abs-{{ forloop.index }}" class="abstract-box">{{ pub.abstract }}</div>
+          </details>
+        {% endif %}
+
+        {% if pub.url %}
+          <a href="{{ pub.url }}" target="_blank" class="rbtn" rel="noopener">Full paper</a>
+        {% endif %}
+
+        {% if pub.replication_url %}
+          <a href="{{ pub.replication_url }}" target="_blank" class="rbtn" rel="noopener">Replication</a>
+        {% endif %}
+
+        {% if pub.slides_url %}
+          <a href="{{ pub.slides_url }}" target="_blank" class="rbtn" rel="noopener">Slides</a>
+        {% endif %}
+      </div>
+    </div>
+    <hr class="subtle-hr" />
+  {% endfor %}
+
+  <h2 class="section-title">Work in Progress</h2>
+  <ul class="wip-list">
+    {% for wip in site.data.work_in_progress %}
+      <li class="wip-item">{{ wip.title }}</li>
+    {% endfor %}
+  </ul>
+
+</div>

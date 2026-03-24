@@ -1,0 +1,151 @@
+/* Publication list (paired with orderedlist/minimal base theme) */
+
+.site-thumb img {
+  border-radius: 4px;
+  max-width: 100%;
+  height: auto;
+}
+
+.publication-section {
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.section-title {
+  margin: 0.2em 0 0.6em;
+  font-size: 1.25em;
+  font-weight: 500;
+}
+
+.subtle-hr {
+  border: 0;
+  border-top: 1px solid #e6e6e6;
+  margin: 0.8em 0 1.2em;
+}
+
+.pub-card {
+  padding: 0.6em 0;
+}
+
+.pub-title {
+  margin: 0 0 0.35em;
+  font-size: 0.95em;
+  font-weight: 400;
+  color: inherit;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  align-items: flex-start;
+}
+
+.rbtn,
+.rbtn-summary {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans",
+    "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 0.78em !important;
+  line-height: 1.1 !important;
+  padding: 0.22em 0.6em !important;
+  border: 1px solid #cfcfcf !important;
+  border-radius: 6px !important;
+  background: #f0f0f0 !important;
+  color: #111 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  vertical-align: top !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+}
+
+.rbtn:hover,
+.rbtn-summary:hover {
+  background: #e7e7e7 !important;
+}
+
+.rbtn:active,
+.rbtn-summary:active {
+  background: #dcdcdc !important;
+}
+
+a.rbtn:link,
+a.rbtn:visited,
+a.rbtn:hover,
+a.rbtn:active {
+  color: #111 !important;
+  background: #f0f0f0 !important;
+  text-decoration: none !important;
+}
+
+.abs-details {
+  display: inline-block !important;
+  vertical-align: top !important;
+  margin: 0;
+  padding: 0;
+}
+
+.abs-details > summary {
+  list-style: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.abs-details > summary::marker {
+  content: "";
+}
+
+.abs-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.abstract-box {
+  margin-top: 0.55em;
+  font-size: 0.9em;
+  padding: 0.6em 0.8em;
+  border-left: 3px solid #e0e0e0;
+  background: #fbfbfb;
+}
+
+.wip-list {
+  margin: 0.4em 0 0;
+  padding-left: 1.1em;
+}
+
+.wip-item {
+  margin: 0.35em 0;
+  font-size: 0.95em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .subtle-hr {
+    border-top-color: #444;
+  }
+
+  .rbtn,
+  .rbtn-summary {
+    background: #3a3a3a !important;
+    color: #eee !important;
+    border-color: #555 !important;
+  }
+
+  .rbtn:hover,
+  .rbtn-summary:hover {
+    background: #444 !important;
+  }
+
+  a.rbtn:link,
+  a.rbtn:visited,
+  a.rbtn:hover,
+  a.rbtn:active {
+    color: #eee !important;
+    background: #3a3a3a !important;
+  }
+
+  details.abs-details[open] > .abstract-box {
+    background: #2a2a2a !important;
+    border-left-color: #444 !important;
+    color: #f0f0f0 !important;
+  }
+}

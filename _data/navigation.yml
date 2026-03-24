@@ -1,28 +1,11 @@
-# The following is the order of the links in the header of the website.
-#
-# Changing the order here will adjust the order and you can also add additional
-# links. Removing a link prevents it from showing in the header, but does not
-# prevent it from being included in the site.
-#
-# NOTE that only one of the CV options should be selected, the first is for the
-#      Markdown formatted page while the second is generated using JSON.
+# Masthead links (Minimal Mistakes pages only; main site uses minimal layout header).
 
 main:
   - title: "Home"
     url: /
 
-  - title: "Research"
-    url: /research/
-
   - title: "CV"
     url: /files/CV_Yonggeun_Jung.pdf
 
-  #- title: "Useful"
-  #  url: /links/  # 마이크로 데이터, USA trade online, OECD, KITA, UN Comtrade, Google Earth eigen etc
-
-  #- title: "Blog"
-  #  url: https://brunch.co.kr/@yuriijung    
-
   - title: "Personal"
-    url: /personal/   
-    
+    url: /personal/
