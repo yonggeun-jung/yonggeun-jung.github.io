@@ -1,0 +1,174 @@
+/*
+  Homepage layout tuned toward hhsandoval.github.io–style (two-column minimal).
+*/
+
+.wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body.minimal-site {
+  font-size: 15px;
+  line-height: 1.55;
+  color: #3f4a5a;
+  padding: 40px 36px 60px;
+}
+
+.minimal-site a {
+  color: #0f766e;
+}
+
+.minimal-site a:hover {
+  color: #0d5c56;
+}
+
+/* Left column — name first, then photo (orderedlist header is fixed-left) */
+header.site-sidebar {
+  width: 270px;
+}
+
+header.site-sidebar h1.site-name {
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #1e293b;
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
+
+.site-photo {
+  margin: 0 0 14px;
+}
+
+.site-photo img {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.site-affil {
+  margin: 0 0 6px !important;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.35;
+}
+
+.site-tagline {
+  margin: 0 0 4px !important;
+  font-size: 0.95rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+.site-verse {
+  margin: 0 0 12px !important;
+  font-size: 0.88rem;
+  color: #64748b;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.site-icon-row {
+  margin: 0 0 0 !important;
+  line-height: 1.2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.site-icon-link {
+  color: #0f766e;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-icon-link:hover {
+  color: #0d5c56;
+}
+
+.site-icon-github .github-icon {
+  display: block;
+}
+
+.site-email {
+  margin: 0.35rem 0 0 !important;
+  line-height: 1.25 !important;
+}
+
+.site-email a {
+  font-size: 0.82rem;
+  font-family: ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
+  word-break: break-all;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Main column — typography */
+section.site-main {
+  font-size: 15px;
+  color: #3f4a5a;
+}
+
+section.site-main > p:first-of-type {
+  margin-top: 0;
+}
+
+section.site-main strong {
+  color: #1e293b;
+}
+
+.home-nav-center {
+  text-align: center;
+  margin: 1.1rem 0 1.25rem;
+  font-size: 0.95rem;
+}
+
+.home-nav-center .nav-sep {
+  margin: 0 0.5em;
+  color: #94a3b8;
+}
+
+/* Footer: full width below columns, not fixed corner */
+footer.site-footer-minimal {
+  position: static !important;
+  float: none !important;
+  clear: both;
+  width: 100%;
+  max-width: 860px;
+  margin: 2em auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid #e8e8e8;
+}
+
+footer.site-footer-minimal p {
+  margin: 0 0 0.5em;
+}
+
+@media print, screen and (max-width: 960px) {
+  body.minimal-site {
+    padding: 24px 18px 40px;
+  }
+
+  header.site-sidebar {
+    padding-right: 0;
+  }
+
+  header.site-sidebar h1.site-name {
+    font-size: 1.5rem;
+  }
+}

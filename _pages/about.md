@@ -10,14 +10,14 @@ redirect_from:
   - /research.html
 ---
 
-### Research Interests
+**Research interests:** International Trade; Industrial Organization; Computational Economics.
 
-International Trade; Industrial Organization; Computational Economics.
+Ph.D. in Economics, University of Florida, 2024–2029 (Expected)  
+M.A. in International Economics, Sogang University, 2021–2024  
+B.A. in International Commerce, Incheon National University, 2010–2014
 
-### Education
+{% include home-nav.html %}
 
-- Ph.D. in Economics, University of Florida, 2024–2029 (Expected)
-- M.A. in International Economics, Sogang University, 2021–2024
-- B.A. in International Commerce, Incheon National University, 2010–2014
+---
 
 {% include publications_minimal.html %}

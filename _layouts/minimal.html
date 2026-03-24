@@ -5,42 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title != nil and page.title != '' %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/minimal-theme.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/academicons.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/minimal-home.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/minimal-publications.css' | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon-180x180.png' | relative_url }}">
   <link rel="icon" type="image/png" href="{{ '/images/favicon-32x32.png' | relative_url }}" sizes="32x32">
   <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}">
 </head>
-<body>
+<body class="minimal-site">
   <div class="wrapper">
-    <header>
-      <p class="site-thumb"><img src="{{ '/images/' | append: site.author.avatar | relative_url }}" alt="{{ site.author.name }}" width="120" height="120"></p>
-      <h1>{{ site.author.name }}</h1>
-      <p>{{ site.author.employer }}{% if site.author.bio %}<br>{{ site.author.bio }}{% endif %}</p>
-      <p class="meta-links">
-        {% if site.author.orcid %}<a href="{{ site.author.orcid }}">ORCID</a>{% endif %}
-        {% if site.author.googlescholar %} &nbsp;|&nbsp; <a href="{{ site.author.googlescholar }}">Google Scholar</a>{% endif %}
-        {% if site.author.github %} &nbsp;|&nbsp; <a href="https://github.com/{{ site.author.github }}">GitHub</a>{% endif %}
+    <header class="site-sidebar">
+      <h1 class="site-name">{{ site.author.name }}</h1>
+      <p class="site-photo">
+        <img src="{{ '/images/' | append: site.author.avatar | relative_url }}" alt="{{ site.author.name }}" width="200" height="200">
       </p>
-      <p><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
-      <p class="site-nav">
-        <a href="{{ '/' | relative_url }}">Home</a> &nbsp;|&nbsp;
-        <a href="{{ '/files/CV_Yonggeun_Jung.pdf' | relative_url }}">CV</a> &nbsp;|&nbsp;
-        <a href="{{ '/personal/' | relative_url }}">Personal</a>
+      <p class="site-affil">{{ site.author.employer }}</p>
+      {% if site.author.tagline %}<p class="site-tagline">{{ site.author.tagline }}</p>{% endif %}
+      {% if site.author.verse %}<p class="site-verse">{{ site.author.verse }}</p>{% endif %}
+
+      <p class="site-icon-row">
+        {% if site.author.orcid %}
+          <a href="{{ site.author.orcid }}" class="site-icon-link" title="ORCID" rel="noopener"><i class="ai ai-orcid ai-2x" aria-hidden="true"></i><span class="visually-hidden">ORCID</span></a>
+        {% endif %}
+        {% if site.author.googlescholar %}
+          <a href="{{ site.author.googlescholar }}" class="site-icon-link" title="Google Scholar" rel="noopener"><i class="ai ai-google-scholar ai-2x" aria-hidden="true"></i><span class="visually-hidden">Google Scholar</span></a>
+        {% endif %}
+        {% if site.author.github %}
+          <a href="https://github.com/{{ site.author.github }}" class="site-icon-link site-icon-github" title="GitHub" rel="noopener">{% include icon-github.html %}<span class="visually-hidden">GitHub</span></a>
+        {% endif %}
       </p>
+
+      <p class="site-email"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
     </header>
-    <section>
+
+    <section class="site-main">
       {{ content }}
     </section>
+
     <footer class="site-footer-minimal">
-      <p><small>Hosted on GitHub Pages.</small></p>
-      <p><small>
-        Layout and styles are adapted from
-        <a href="https://github.com/orderedlist/minimal" rel="noopener">Minimal</a>
-        by <a href="https://github.com/orderedlist" rel="noopener">Steve Smith</a> (orderedlist),
-        used under
-        <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener">CC&nbsp;BY-SA&nbsp;3.0</a>.
-        <a href="{{ '/attribution/' | relative_url }}">Full credits</a>
-      </small></p>
+      <p><small>Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist/minimal" rel="noopener">orderedlist</a><br>
+      Last updated: {{ site.time | date: "%B %Y" }}</small></p>
     </footer>
   </div>
   <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
