@@ -157,15 +157,18 @@ summary.pub-aux-link:hover {
 .wip-line {
   margin: 0.35em 0;
   padding: 0;
-  text-indent: 0;
   line-height: 1.55;
+  display: grid;
+  grid-template-columns: minmax(1.5em, auto) 1fr;
+  gap: 0.55rem;
+  align-items: start;
 }
 
 .wip-num {
-  display: inline;
+  display: block;
   color: #9ca3af;
   font-weight: 500;
-  margin-right: 0.35em;
+  margin-right: 0;
   font-size: 0.95em;
 }
 
