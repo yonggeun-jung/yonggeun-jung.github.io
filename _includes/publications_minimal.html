@@ -3,45 +3,59 @@
   <h2 class="section-title">Publications and Working papers</h2>
 
   {% for pub in site.data.publications %}
-    {% assign c = pub.citation %}
-    {% if c contains ',' %}
-      {% assign first_part = c | split: ',' | first %}
-      {% assign rest = c | remove_first: first_part | strip | remove_first: ',' | strip %}
+    {% if pub.citation_lead %}
+      {% assign lead = pub.citation_lead %}
+      {% assign rest = pub.citation_rest | default: '' %}
+      {% assign rest_markdown = true %}
     {% else %}
-      {% assign first_part = c %}
-      {% assign rest = '' %}
+      {% assign c = pub.citation %}
+      {% if c contains ',' %}
+        {% assign lead = c | split: ',' | first %}
+        {% assign rest = c | remove_first: lead | strip | remove_first: ',' | strip %}
+      {% else %}
+        {% assign lead = c %}
+        {% assign rest = '' %}
+      {% endif %}
+      {% assign rest_markdown = false %}
     {% endif %}
 
     <div class="pub-card">
-      <p class="pub-title-line">
-        <span class="pub-num">{{ forloop.index }}.</span>
-        <span class="pub-title-text">
+      <span class="pub-num">{{ forloop.index }}.</span>
+      <div class="pub-main-col">
+        <div class="pub-title-line">
           {% if pub.url %}
-            <a href="{{ pub.url }}" class="pub-title-link" target="_blank" rel="noopener">
-              <span class="citation-first">{{ first_part }}</span>{% if rest != '' %}<span class="citation-rest">, {{ rest }}</span>{% endif %}
-            </a>
+            <a href="{{ pub.url }}" class="citation-lead-link" target="_blank" rel="noopener">{{ lead }}</a>
           {% else %}
-            <span class="citation-first">{{ first_part }}</span>{% if rest != '' %}<span class="citation-rest">, {{ rest }}</span>{% endif %}
+            <span class="citation-lead-plain">{{ lead }}</span>
           {% endif %}
-        </span>
-      </p>
+          {% if rest != '' %}
+            <span class="citation-rest">
+              {% if rest_markdown %}
+                {{ rest | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip }}
+              {% else %}
+                , {{ rest }}
+              {% endif %}
+            </span>
+          {% endif %}
+        </div>
 
-      {% if pub.abstract or pub.replication_url or pub.slides_url %}
-      <div class="pub-meta-row">
-        {% if pub.abstract %}
-          <details class="abs-details">
-            <summary class="pub-aux-link">Abstract</summary>
-            <div class="abstract-box">{{ pub.abstract }}</div>
-          </details>
-        {% endif %}
-        {% if pub.replication_url %}
-          <a href="{{ pub.replication_url }}" class="pub-aux-link" target="_blank" rel="noopener">Replication</a>
-        {% endif %}
-        {% if pub.slides_url %}
-          <a href="{{ pub.slides_url }}" class="pub-aux-link" target="_blank" rel="noopener">Slides</a>
+        {% if pub.abstract or pub.replication_url or pub.slides_url %}
+        <div class="pub-meta-row">
+          {% if pub.abstract %}
+            <details class="abs-details">
+              <summary class="pub-aux-link">Abstract</summary>
+              <div class="abstract-box">{{ pub.abstract }}</div>
+            </details>
+          {% endif %}
+          {% if pub.replication_url %}
+            <a href="{{ pub.replication_url }}" class="pub-aux-link" target="_blank" rel="noopener">Replication</a>
+          {% endif %}
+          {% if pub.slides_url %}
+            <a href="{{ pub.slides_url }}" class="pub-aux-link" target="_blank" rel="noopener">Slides</a>
+          {% endif %}
+        </div>
         {% endif %}
       </div>
-      {% endif %}
     </div>
   {% endfor %}
 

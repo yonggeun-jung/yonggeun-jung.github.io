@@ -11,6 +11,7 @@ redirect_from:
 ---
 
 I am a second-year Ph.D. student in Economics at the University of Florida. Before starting the Ph.D. program, I served for three years as an intelligence officer in the Republic of Korea Air Force and worked for six years as a sales manager covering Russia and the CIS region at DORCO, which motivates my research on trade, sanctions, and firm behavior.
+{: .site-lead}
 
 **Research interests:** International Trade; Industrial Organization; Computational Economics.
 

@@ -1,7 +1,7 @@
-/* Publications — sky-blue titles, red aux links, horizontal meta row, numbering */
+/* Publications — grid aligns Abstract with title; sizes; nav-colored aux links */
 
 .publication-section {
-  font-size: 0.98rem;
+  font-size: 15px;
   line-height: 1.55;
   color: #3f4a5a;
 }
@@ -13,34 +13,52 @@
   color: #1e293b;
 }
 
+/* Number | title+meta (meta aligns with title column) */
 .pub-card {
+  display: grid;
+  grid-template-columns: minmax(1.5em, auto) 1fr;
+  gap: 0.25rem 0.55rem;
+  align-items: start;
   padding: 0 0 1em;
 }
 
-.pub-title-line {
-  margin: 0 0 0.35em;
-  display: flex;
-  gap: 0.4rem;
-  align-items: baseline;
-  font-size: 0.98rem;
-}
-
 .pub-num {
-  flex-shrink: 0;
-  min-width: 1.6em;
+  grid-column: 1;
+  grid-row: 1;
   color: #9ca3af;
   font-weight: 500;
   font-size: 0.95em;
+  line-height: 1.55;
+  padding-top: 0.05em;
 }
 
-.pub-title-text {
-  flex: 1;
+.pub-main-col {
+  grid-column: 2;
+  grid-row: 1;
   min-width: 0;
 }
 
-/* First segment before comma: sky blue; rest: black (inside link, rest stays dark on hover) */
-.citation-first {
-  color: #0f83c6;
+.pub-title-line {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+/* Blue link = paper title only; rest black; hover bold on link only */
+a.citation-lead-link {
+  color: var(--pub-link-blue, #0f83c6);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+a.citation-lead-link:hover {
+  font-weight: 600;
+  color: var(--pub-link-blue, #0f83c6);
+}
+
+.citation-lead-plain {
+  color: var(--pub-link-blue, #0f83c6);
   font-weight: 400;
 }
 
@@ -49,31 +67,20 @@
   font-weight: 400;
 }
 
-a.pub-title-link {
-  text-decoration: none;
-  border-bottom: none;
+.citation-rest em {
+  font-style: italic;
 }
 
-a.pub-title-link .citation-first {
-  color: #0f83c6;
-}
-
-a.pub-title-link .citation-rest {
-  color: #1a1a1a;
-}
-
-a.pub-title-link:hover .citation-rest {
-  color: #1a1a1a;
-}
-
-/* One row: Abstract | Replication | Slides */
+/* Smaller row under title; same hue as Home | CV | Personal */
 .pub-meta-row {
-  margin-top: 0.3em;
+  margin-top: 0.35em;
   display: flex;
   flex-flow: row wrap;
   align-items: baseline;
   gap: 0.25rem 1rem;
   font-size: 0.88rem;
+  line-height: 1.45;
+  color: #e57373;
 }
 
 .abs-details {
@@ -90,10 +97,6 @@ a.pub-title-link:hover .citation-rest {
   display: inline;
 }
 
-summary.pub-aux-link:hover {
-  font-weight: 600;
-}
-
 .abs-details > summary::-webkit-details-marker {
   display: none;
 }
@@ -102,37 +105,42 @@ summary.pub-aux-link:hover {
   content: "";
 }
 
-.abstract-box {
-  display: block;
-  margin: 0.45em 0 0;
-  padding: 0.55em 0.75em;
-  font-size: 0.92em;
-  border-left: 3px solid #e5e7eb;
-  background: #f9fafb;
-  color: #334155;
-}
-
-/* Red family for abstract toggle + aux */
 .pub-meta-row .pub-aux-link {
-  color: #d65a5a;
+  color: #e57373;
   text-decoration: none;
   font-weight: 500;
 }
 
 .pub-meta-row .pub-aux-link:hover {
-  color: #c53030;
+  color: #d65a5a;
+  font-weight: 600;
 }
 
-/* Work in Progress — numbered inline, light gray numbers */
+summary.pub-aux-link:hover {
+  font-weight: 600;
+}
+
+.abstract-box {
+  display: block;
+  margin: 0.45em 0 0;
+  padding: 0.55em 0.75em;
+  font-size: 0.88em;
+  line-height: 1.5;
+  border-left: 3px solid #e5e7eb;
+  background: #f9fafb;
+  color: #334155;
+}
+
 .wip-section {
   margin: 0.35em 0 0;
+  font-size: 15px;
 }
 
 .wip-line {
   margin: 0.35em 0;
   padding: 0;
   text-indent: 0;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .wip-num {
@@ -145,14 +153,6 @@ summary.pub-aux-link:hover {
 
 @media (prefers-color-scheme: dark) {
   .citation-rest {
-    color: #e5e7eb;
-  }
-
-  a.pub-title-link .citation-rest {
-    color: #e5e7eb;
-  }
-
-  a.pub-title-link:hover .citation-rest {
     color: #e5e7eb;
   }
 

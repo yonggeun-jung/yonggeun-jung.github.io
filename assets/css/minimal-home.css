@@ -1,6 +1,11 @@
 /*
   Homepage layout tuned toward hhsandoval.github.io–style (two-column minimal).
+  Link blue --pub-link-blue matches paper titles and email.
 */
+
+:root {
+  --pub-link-blue: #0f83c6;
+}
 
 .wrapper::after {
   content: "";
@@ -15,9 +20,16 @@ body.minimal-site {
   padding: 40px 36px 60px;
 }
 
-/* All hyperlinks: bolder on hover (icons may shift slightly) */
-body.minimal-site a:hover {
+/* Hover bold only where we want it (not global on all <a>) */
+.nav-site-link:hover,
+.mail-link:hover,
+footer.site-footer-minimal a:hover,
+.citation-lead-link:hover {
   font-weight: 600;
+}
+
+.site-icon-link:hover {
+  font-weight: 400;
 }
 
 /* Left column — name first, then photo */
@@ -53,7 +65,6 @@ header.site-sidebar h1.site-name {
   line-height: 1.35;
 }
 
-/* Economics + verse on one line; Economics not bold */
 .site-econ-verse {
   margin: 0 0 12px !important;
   font-size: 0.92rem;
@@ -80,7 +91,7 @@ header.site-sidebar h1.site-name {
 }
 
 .site-icon-row .ai {
-  font-size: 1.05rem;
+  font-size: 1.18rem;
 }
 
 .site-icon-link {
@@ -90,7 +101,6 @@ header.site-sidebar h1.site-name {
   text-decoration: none;
 }
 
-/* Brand identity colors */
 .site-icon-orcid {
   color: #a6ce39 !important;
 }
@@ -117,6 +127,8 @@ header.site-sidebar h1.site-name {
 
 .site-icon-github .github-icon {
   display: block;
+  width: 20px;
+  height: 20px;
 }
 
 .site-email {
@@ -128,12 +140,12 @@ header.site-sidebar h1.site-name {
   font-size: 0.82rem;
   font-family: ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
   word-break: break-all;
-  color: #0066cc;
+  color: var(--pub-link-blue);
   text-decoration: none;
 }
 
 .mail-link:hover {
-  color: #004999;
+  color: #0a6aa8;
 }
 
 .visually-hidden {
@@ -148,10 +160,15 @@ header.site-sidebar h1.site-name {
   border: 0;
 }
 
-/* Main column */
+/* Main column — same base size as publication titles */
 section.site-main {
   font-size: 15px;
   color: #3f4a5a;
+}
+
+section.site-main .site-lead {
+  font-size: 15px;
+  line-height: 1.55;
 }
 
 section.site-main > p:first-of-type {
@@ -162,11 +179,10 @@ section.site-main strong {
   color: #1e293b;
 }
 
-/* Home | CV | Personal — light red */
 .home-nav-center {
   text-align: center;
   margin: 1.1rem 0 1.25rem;
-  font-size: 0.95rem;
+  font-size: 15px;
 }
 
 .nav-site-link {
@@ -183,7 +199,6 @@ section.site-main strong {
   color: #cbd5e1;
 }
 
-/* Footer */
 footer.site-footer-minimal {
   position: static !important;
   float: none !important;
@@ -200,7 +215,7 @@ footer.site-footer-minimal p {
 }
 
 footer.site-footer-minimal a {
-  color: #0066cc;
+  color: var(--pub-link-blue);
 }
 
 @media print, screen and (max-width: 960px) {

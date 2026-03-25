@@ -1,37 +1,71 @@
+# Each entry:
+#   citation_lead — blue, clickable link text (set this to control highlight length).
+#   citation_rest — remainder; use Markdown: *Journal Name* for italics. Leading comma is included in the string.
+# If citation_lead is omitted, the first comma in `citation` splits lead vs rest (legacy).
+# `citation` is kept as a full-line reference for your records.
+
 - citation: "Investing Abroad, Transforming at Home: An Empirical Study of Outward Foreign Direct Investment and Korean Manufacturing’s Servicification, with Jung Hur, East Asian Economic Review, 28(2), June 2024, 143-174."
+  citation_lead: "Investing Abroad, Transforming at Home: An Empirical Study of Outward Foreign Direct Investment and Korean Manufacturing’s Servicification, with Jung Hur"
+  citation_rest: ", *East Asian Economic Review*, 28(2), June 2024, 143-174."
   abstract: "This paper empirically examines the relationship between outward foreign direct investment (OFDI) of Korean manufacturing firms and the servicification of domestic employment using a firm-level panel data. In this study, considering the issue of low productivity in the Korean service sector, we categorize service employment into core and non-core services and investigate their relationship with OFDI using the firm-fixed effects model. The empirical results show that the share of core service employment exhibits a positive correlation with the extensive OFDI. On the other hand, the share of non-core service employment, which is expected to generate relatively low valueadded, does not show a significant relationship with the extensive OFDI. When we divide the samples based on host countries and the type of subsidiaries, the impact on servicification varies depending on the technological capabilities of host countries and their participation in global value chains. Our study suggests that Korean manufacturing firm’s internationalization strategies may facilitate a transition from labor-intensive employment, like the cases in advanced countries, to technology-intensive employment through OFDI and other means."
   url: "https://www.eaerweb.org/selectArticleInfo.do?article_a_no=JE0001_2024_v28n2_143&ano=JE0001_2024_v28n2_143"
+
 - citation: "Immigration, Value-Added Exports, and Global Value Chains in Korea, Bank of Korea Economic Analysis, 30(2), June 2024, 79-114."
+  citation_lead: "Immigration, Value-Added Exports, and Global Value Chains in Korea"
+  citation_rest: ", *Bank of Korea Economic Analysis*, 30(2), June 2024, 79-114."
   abstract: "This paper investigates the impact of immigration on Korea’s value-added exports and participation in Global Value Chains (GVCs) using a country-level panel dataset. To address the endogeneity between immigration and trade, this study employs a fixed effects two-stage model and uses visa policy as an instrumental variable. The results reveal that immigration significantly enhances Korea’s domestic value-added exports and GVC involvement, highlighting the crucial role of immigrants in the nation's trade dynamics. The impact of immigration on value-added exports varies with the economic status of immigrants' home countries, with significant effects observed primarily in low-income countries. This effect is mainly driven by the increase in Korea's domestic value-added embedded in exports from these low-income countries, demonstrating a forward linkage. Additionally, the study finds that the coefficient for the industry sector is larger, providing insights into sector-specific dynamics."
   url: "https://www.bok.or.kr/imerEng/bbs/E0002726/view.do?nttId=10085494&searchCnd=1&searchKwd=&depth2=600346&depth=600346&pageUnit=10&pageIndex=1&programType=rsrchrDataEng&menuNo=600346&oldMenuNo=600346"
+
 - citation: "Machine Learning-Based Estimation of Monthly GDP"
+  citation_lead: "Machine Learning-Based Estimation of Monthly GDP"
   abstract: "This paper proposes a scalable framework to estimate monthly GDP using machine learning methods. We apply Multi-Layer Perceptron (MLP), Long Short-Term Memory networks (LSTM), Extreme Gradient Boosting (XGBoost), and Elastic Net regression to map monthly indicators to quarterly GDP growth, and reconcile the outputs with actual aggregates. Using data from China, Germany, the UK, and the US, our method delivers robust performance across varied data environments. Benchmark comparisons with prior US studies and UK official statistics validate its accuracy. The approach offers a flexible and data-driven tool for high-frequency macroeconomic monitoring and policy analysis."
   url: "https://arxiv.org/abs/2506.14078"
   replication_url: "https://github.com/Yonggeun-Jung/monthly_gdp"
+
 - citation: "TGIF: A Quasi-Experimental Analysis of Pre-Weekend Productivity, Bank of Korea Economic Analysis, 31(3), September 2025, 33-67."
+  citation_lead: "TGIF: A Quasi-Experimental Analysis of Pre-Weekend Productivity"
+  citation_rest: ", *Bank of Korea Economic Analysis*, 31(3), September 2025, 33-67."
   abstract: "This paper investigates the pre-weekend decline in productivity by leveraging a unique quasi-experiment: the United Arab Emirates’ (UAE) 2022 weekend shift from Friday-Saturday to Saturday-Sunday. Using a difference-in-differences (DiD) framework, we analyze high-frequency proxies for work-related attentiveness, including a novel Google Trends index and Dubai’s financial market volume. We show that the engagement dip did not vanish but shifted from Thursday to Friday in line with the new weekend. This causal evidence demonstrates that the decline arises from the day’s status as the pre-weekend. The findings, confirmed through robust placebo and bootstrap tests, suggest that the workweek’s structure itself drives end-of-week behavior and offer implications for alternative work schedule policies."
   url: "https://www.dropbox.com/scl/fi/kgs1uth7no8fdj8qo1tec/TGIF__A_Quasi_Experimental_Analysis_revised_Sep_2025.pdf?rlkey=ltxf847rjp60ao1c0v55gtmn9&st=csezr573&dl=0"
   replication_url: "https://www.dropbox.com/scl/fo/ea8n7u3i24sa83kaalype/AHQmSR6f-JGAKQlu82M7thc?rlkey=gvyofz4drk7x1ntwpwf5754eo&st=pou84ty7&dl=0"
   slides_url: "https://www.dropbox.com/scl/fi/9r01glekw4zhd4xsye4et/TGIF__A_Quasi_Experimental_Analysis_Presentation.pdf?rlkey=hu0gb8gn9wd0oj0956a2t0zvd&st=c1ctormo&dl=0"
+
 - citation: "The Driver’s Dilemma: The Nash Equilibrium Behind Large Car Preferences, with Chenhui Lu"
+  citation_lead: "The Driver’s Dilemma: The Nash Equilibrium Behind Large Car Preferences, with Chenhui Lu"
+  citation_rest: ""
   abstract: "This paper examines how individual incentives for vehicle safety can lead to socially inefficient outcomes. Using a game-theoretic framework calibrated to reflect stylized facts from the US vehicle market, we show that the rising share of large vehicles—while privately rational—generates external costs for pedestrians and other drivers. We analyze equilibrium outcomes under both homogeneous and heterogeneous preferences, evaluate three policy tools, and extend the model to dynamic settings using sequential game, evolutionary, and agent-based simulations. Our results underscore the need for targeted policies to realign private incentives with social welfare."
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5631250"
   replication_url: "https://www.dropbox.com/scl/fo/9xq6r5yn4d03wq4844qs4/AE6s448JYpFnthZi9eY0y4U?rlkey=ltrv4x5y9n5k49baom4joz80p&st=jmo9qt28&dl=0"
+
 - citation: "When Do Countries Cooperate in Trade Negotiations?, with Milton Bronstein, Hamid Firooz, and Gunnar Heins"
+  citation_lead: "When Do Countries Cooperate in Trade Negotiations?, with Milton Bronstein, Hamid Firooz, and Gunnar Heins"
+  citation_rest: ""
   abstract: "When will countries cooperate within trade negotiations and under which underlying conditions? In this paper, we study trade wars and trade talks within a structural framework that allows for rich cross-county and sectoral heterogeneity in demand, productivity, and trade costs and in which countries specialize in sectors with heterogeneous markups and profits. We find that compared to perfect competition, especially heterogeneity in demand across countries generates a high degree of dispersion in optimal tariffs across countries, ranging from 0 to close to 100%. Further, the more unequal countries are in terms of demand elasticities, the higher will be the cooperative tariff that can be at most agreed on. Lastly, we find that groups of countries that specialize in high-markup goods find it easier to agree on tariff reductions than those producing low-markup varieties, suggesting a potential reason for why richer countries sign disproportionately more trade agreements than poorer countries do."
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5401733"
+
 - citation: "Watching Trade from Space: Nowcasting and Spatial Extrapolation of Port-Level Maritime Trade Using Satellite Imagery"
+  citation_lead: "Watching Trade from Space: Nowcasting and Spatial Extrapolation of Port-Level Maritime Trade Using Satellite Imagery"
+  citation_rest: ""
   abstract: "This paper develops a framework for measuring port-level maritime trade using publicly available satellite data and port characteristics. Combining synthetic aperture radar imagery, nighttime lights, and port attributes in a machine learning model, we accurately nowcast monthly port-level trade using U.S. data. Training the model on continental U.S. ports, we show that a simple anchoring strategy allows spatial extrapolation to isolated ports in Hawaii. Applying the framework to Russian ports after the 2022 sanctions, we document heterogeneous changes across ports in the absence of official trade statistics. The approach complements AIS-based methods when conventional data are delayed or unavailable."
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984017"
   replication_url: "https://github.com/yonggeun-jung/watching_trade_public"
+
 - citation: "Replicating Political Economy Weights in Ossa (2014): An Optimization-based Alternative"
+  citation_lead: "Replicating Political Economy Weights in Ossa (2014): An Optimization-based Alternative"
+  citation_rest: ""
   abstract: "We replicate the political economy weights in Ossa (2014) using a Levenberg-Marquardt optimization framework. The optimization routine yields clearer firstorder optimality diagnostics, with Japan showing the most notable differences relative to the heuristic procedure, while most other countries display outcomes that are numerically close to the original implementation. Despite these differences in the underlying weights, the implied optimal tariff profiles remain highly stable across methods."
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6165906"
   replication_url: "https://github.com/yonggeun-jung/replication-ossa2014-peweights"
+
 - citation: "Cross-category Portfolio and Bargaining Power: Evidence from the US Men's Razor Market"
+  citation_lead: "Cross-category Portfolio and Bargaining Power: Evidence from the US Men's Razor Market"
+  citation_rest: ""
   abstract: "This paper studies how a manufacturer’s dominance in one product category affects its bargaining outcomes in another. Using data on the US shaving market, we develop a Nash bargaining framework and estimate a two-stage empirical model in which demand estimation informs the bargaining stage. We find that greater cross-category dominance, defined as the share of unit sales in non-focal categories, systematically increases negotiated shelf share, while larger retailers offset this effect. A counterfactual merger simulation between multi-category manufacturers shows that portfolio expansion reduces consumer welfare, with part of the loss stemming from reduced product variety. The results suggest that cross-category portfolio power can influence vertical negotiations beyond traditional price channels."
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6121267"
+
 - citation: "Does Competition Really Saturate? Revisiting Bresnahan and Reiss (1991) with Structural Fixed Costs"
+  citation_lead: "Does Competition Really Saturate? Revisiting Bresnahan and Reiss (1991) with Structural Fixed Costs"
+  citation_rest: ""
   abstract: "This paper re-evaluates the entry framework of Bresnahan and Reiss (1991) by relaxing their assumption that fixed costs are non-decreasing in the number of firms. We introduce a tractable specification that accommodates both congestion and agglomeration economies. Re-estimating BR's original tire dealer data confirms that fixed costs increase with entry. Extending the analysis to 85 retail and service industries using 2005 County Business Patterns data across 582 isolated rural markets, we provide broad empirical validation for Bresnahan and Reiss (1991)'s assumption: in isolated local economies, congestion universally dominates agglomeration, and the observed convergence of entry thresholds can be unambiguously attributed to competitive saturation."
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6451483"
   replication_url: "https://github.com/yonggeun-jung/fixed_cost_BR1991"
