@@ -21,12 +21,13 @@
 
     {% assign lead_main = lead %}
     {% assign lead_with = '' %}
-    {% if lead contains ' with ' %}
-      {% assign lead_parts = lead | split: ' with ' %}
+    {% comment %}Co-authors: only split on ", with " so titles like "... (1991) with Structural Fixed Costs" stay intact.{% endcomment %}
+    {% if lead contains ', with ' %}
+      {% assign lead_parts = lead | split: ', with ' %}
       {% assign lead_main = lead_parts[0] %}
       {% assign lead_with = '' %}
       {% for p in lead_parts offset:1 %}
-        {% if lead_with != '' %}{% assign lead_with = lead_with | append: ' with ' %}{% endif %}
+        {% if lead_with != '' %}{% assign lead_with = lead_with | append: ', with ' %}{% endif %}
         {% assign lead_with = lead_with | append: p %}
       {% endfor %}
     {% endif %}
@@ -41,7 +42,7 @@
             <span class="citation-lead-plain">{{ lead_main }}</span>
           {% endif %}
           {% if lead_with != '' %}
-            <span class="citation-with"> with {{ lead_with }}</span>
+            <span class="citation-with">, with {{ lead_with }}</span>
           {% endif %}
           {% if rest != '' %}
             <span class="citation-rest">

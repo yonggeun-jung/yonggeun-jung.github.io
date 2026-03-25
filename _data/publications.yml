@@ -1,5 +1,6 @@
 # Each entry:
 #   citation_lead — blue, clickable link text (set this to control highlight length).
+#   Co-authors: only the pattern ", with …" splits into gray (not plain " with …" inside the title).
 #   citation_rest — remainder; use Markdown: *Journal Name* for italics. Leading comma is included in the string.
 # If citation_lead is omitted, the first comma in `citation` splits lead vs rest (legacy).
 # `citation` is kept as a full-line reference for your records.
