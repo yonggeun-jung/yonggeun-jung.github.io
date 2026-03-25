@@ -19,14 +19,29 @@
       {% assign rest_markdown = false %}
     {% endif %}
 
+    {% assign lead_main = lead %}
+    {% assign lead_with = '' %}
+    {% if lead contains ' with ' %}
+      {% assign lead_parts = lead | split: ' with ' %}
+      {% assign lead_main = lead_parts[0] %}
+      {% assign lead_with = '' %}
+      {% for p in lead_parts offset:1 %}
+        {% if lead_with != '' %}{% assign lead_with = lead_with | append: ' with ' %}{% endif %}
+        {% assign lead_with = lead_with | append: p %}
+      {% endfor %}
+    {% endif %}
+
     <div class="pub-card">
       <span class="pub-num">{{ forloop.index }}.</span>
       <div class="pub-main-col">
         <div class="pub-title-line">
           {% if pub.url %}
-            <a href="{{ pub.url }}" class="citation-lead-link" target="_blank" rel="noopener">{{ lead }}</a>
+            <a href="{{ pub.url }}" class="citation-lead-link" target="_blank" rel="noopener">{{ lead_main }}</a>
           {% else %}
-            <span class="citation-lead-plain">{{ lead }}</span>
+            <span class="citation-lead-plain">{{ lead_main }}</span>
+          {% endif %}
+          {% if lead_with != '' %}
+            <span class="citation-with"> with {{ lead_with }}</span>
           {% endif %}
           {% if rest != '' %}
             <span class="citation-rest">
@@ -59,7 +74,9 @@
     </div>
   {% endfor %}
 
-  <h2 class="section-title">Work in Progress</h2>
+  <hr class="pub-wip-divider" />
+
+  <h2 class="section-title section-title--wip">Work in Progress</h2>
   <div class="wip-section">
     {% for wip in site.data.work_in_progress %}
       <p class="wip-line"><span class="wip-num">{{ forloop.index }}.</span> {{ wip.title }}</p>

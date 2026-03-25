@@ -131,6 +131,18 @@ header.site-sidebar h1.site-name {
   height: 20px;
 }
 
+.site-icon-linkedin {
+  color: #0a66c2 !important;
+}
+
+.site-icon-linkedin:hover {
+  color: #004182 !important;
+}
+
+.site-icon-linkedin .linkedin-icon {
+  display: block;
+}
+
 .site-email {
   margin: 0.35rem 0 0 !important;
   line-height: 1.25 !important;

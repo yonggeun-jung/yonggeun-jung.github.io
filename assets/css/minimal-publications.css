@@ -71,6 +71,24 @@ a.citation-lead-link:hover {
   font-style: italic;
 }
 
+/* Co-author line after " with …" — gray, not part of title link (no hover bold) */
+.citation-with {
+  color: #6b7280;
+  font-weight: 400;
+}
+
+/* Divider before Work in Progress */
+.pub-wip-divider {
+  border: 0;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 1.75rem 0 1.15rem;
+}
+
+.publication-section .section-title--wip {
+  margin-top: 0;
+}
+
 /* Smaller row under title; same hue as Home | CV | Personal */
 .pub-meta-row {
   margin-top: 0.35em;
@@ -154,6 +172,14 @@ summary.pub-aux-link:hover {
 @media (prefers-color-scheme: dark) {
   .citation-rest {
     color: #e5e7eb;
+  }
+
+  .citation-with {
+    color: #9ca3af;
+  }
+
+  .pub-wip-divider {
+    background: #475569;
   }
 
   .abstract-box {

@@ -39,6 +39,10 @@
         {% if site.author.github %}
           <a href="https://github.com/{{ site.author.github }}" class="site-icon-link site-icon-github" title="GitHub" rel="noopener">{% include icon-github.html %}<span class="visually-hidden">GitHub</span></a>
         {% endif %}
+        {% assign _linkedin = site.author.linkedin | strip %}
+        {% if _linkedin != '' %}
+          <a href="https://www.linkedin.com/in/{{ _linkedin }}" class="site-icon-link site-icon-linkedin" title="LinkedIn" rel="noopener">{% include icon-linkedin.html %}<span class="visually-hidden">LinkedIn</span></a>
+        {% endif %}
       </p>
 
       <p class="site-email"><a class="mail-link" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
