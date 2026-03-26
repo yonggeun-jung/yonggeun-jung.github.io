@@ -240,6 +240,40 @@ footer.site-footer-minimal a {
   color: var(--pub-link-blue);
 }
 
+/* Resources page — dash bullets, no indent, 3-line items */
+.resources-list {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+}
+
+.resource-item {
+  position: relative;
+  padding-left: 1.15rem;
+  margin: 0.85rem 0;
+}
+
+.resource-item::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #9ca3af;
+}
+
+.resource-title {
+  margin: 0;
+}
+
+.resource-desc,
+.resource-related {
+  margin: 0.15rem 0 0;
+}
+
+.resource-label {
+  color: #6b7280;
+}
+
 @media print, screen and (max-width: 960px) {
   body.minimal-site {
     padding: 24px 18px 40px;
