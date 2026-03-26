@@ -16,7 +16,7 @@
 <body class="minimal-site">
   <div class="wrapper">
     <header class="site-sidebar">
-      <h1 class="site-name">{{ site.author.name }}</h1>
+      <h1 class="site-name"><a class="site-name-link" href="{{ '/' | relative_url }}">{{ site.author.name }}</a></h1>
       <p class="site-photo">
         <img src="{{ '/images/' | append: site.author.avatar | relative_url }}" alt="{{ site.author.name }}" width="280" height="280">
       </p>
