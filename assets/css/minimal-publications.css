@@ -77,6 +77,27 @@ a.citation-lead-link:hover {
   font-weight: 400;
 }
 
+.citation-coauthor-link {
+  color: var(--pub-link-blue, #0f83c6);
+  text-decoration: underline;
+  text-decoration-color: rgba(15, 131, 198, 0.55);
+  text-underline-offset: 0.18em;
+  font-weight: 400; /* keep coauthor names from becoming bold on hover */
+}
+
+.citation-coauthor-link:hover {
+  font-weight: 400;
+  color: var(--pub-link-blue, #0f83c6);
+}
+
+.coauthor-sep {
+  color: #6b7280;
+}
+
+.citation-coauthor-name {
+  color: #6b7280;
+}
+
 /* Divider before Work in Progress */
 .pub-wip-divider {
   border: 0;
@@ -178,6 +199,19 @@ summary.pub-aux-link:hover {
   }
 
   .citation-with {
+    color: #9ca3af;
+  }
+
+  .citation-coauthor-link {
+    color: var(--pub-link-blue, #0f83c6);
+    text-decoration-color: rgba(15, 131, 198, 0.55);
+  }
+
+  .coauthor-sep {
+    color: #9ca3af;
+  }
+
+  .citation-coauthor-name {
     color: #9ca3af;
   }
 

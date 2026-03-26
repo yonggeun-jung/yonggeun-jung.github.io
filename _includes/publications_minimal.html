@@ -42,7 +42,31 @@
             <span class="citation-lead-plain">{{ lead_main }}</span>
           {% endif %}
           {% if lead_with != '' %}
-            <span class="citation-with">, with {{ lead_with }}</span>
+            <span class="citation-with">
+              , with
+              {% assign co_text = lead_with %}
+              {% assign co_parts = co_text | split: ',' %}
+              {% for part in co_parts %}
+                {% assign seg = part | strip %}
+                {% if seg != '' %}
+                  {% if forloop.index0 > 0 %}
+                    {% if seg | slice: 0, 4 == 'and ' %}
+                      {% assign seg = seg | remove_first: 'and ' %}
+                      <span class="coauthor-sep"> and </span>
+                    {% else %}
+                      <span class="coauthor-sep">, </span>
+                    {% endif %}
+                  {% endif %}
+
+                  {% assign co_url = site.data.coauthor_websites[seg] %}
+                  {% if co_url and co_url != '' %}
+                    <a class="citation-coauthor-link" href="{{ co_url }}" target="_blank" rel="noopener">{{ seg }}</a>
+                  {% else %}
+                    <span class="citation-coauthor-name">{{ seg }}</span>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            </span>
           {% endif %}
           {% if rest != '' %}
             <span class="citation-rest">
@@ -80,7 +104,42 @@
   <h2 class="section-title section-title--wip">Work in Progress</h2>
   <div class="wip-section">
     {% for wip in site.data.work_in_progress %}
-      <p class="wip-line"><span class="wip-num">{{ forloop.index }}.</span> {{ wip.title }}</p>
+      {% assign wtitle = wip.title %}
+      {% if wtitle contains ' with ' %}
+        {% assign wparts = wtitle | split: ' with ' %}
+        {% assign w_before = wparts[0] %}
+        {% assign w_after = wparts[1] %}
+        <p class="wip-line">
+          <span class="wip-num">{{ forloop.index }}.</span>
+          <span class="wip-title">
+            {{ w_before }} with
+            {% assign co_text = w_after %}
+            {% assign co_parts = co_text | split: ',' %}
+            {% for part in co_parts %}
+              {% assign seg = part | strip %}
+              {% if seg != '' %}
+                {% if forloop.index0 > 0 %}
+                  {% if seg | slice: 0, 4 == 'and ' %}
+                    {% assign seg = seg | remove_first: 'and ' %}
+                    <span class="coauthor-sep"> and </span>
+                  {% else %}
+                    <span class="coauthor-sep">, </span>
+                  {% endif %}
+                {% endif %}
+
+                {% assign co_url = site.data.coauthor_websites[seg] %}
+                {% if co_url and co_url != '' %}
+                  <a class="citation-coauthor-link" href="{{ co_url }}" target="_blank" rel="noopener">{{ seg }}</a>
+                {% else %}
+                  <span class="citation-coauthor-name">{{ seg }}</span>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </span>
+        </p>
+      {% else %}
+        <p class="wip-line"><span class="wip-num">{{ forloop.index }}.</span> {{ wtitle }}</p>
+      {% endif %}
     {% endfor %}
   </div>
 

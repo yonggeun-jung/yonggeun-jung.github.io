@@ -1,0 +1,12 @@
+# Mapping: co-author display name -> website URL
+#
+# This is used by the minimal publications/work-in-progress list.
+# If a name is not present here (or the URL is empty), it will be shown as plain text.
+#
+# Tip: keys must match the names exactly as they appear after ", with" in your titles.
+
+Jung Hur: "https://ecsjhur.sogang.ac.kr/ecsjhur/2270.html"
+Hamid Firooz: "https://sites.google.com/view/hamidfirooz/home"
+Gunnar Heins: "https://sites.google.com/site/gunnarheins/"
+Chenhui Lu: "https://orcid.org/0000-0002-9371-3389"
+
