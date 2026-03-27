@@ -14,6 +14,10 @@ author_profile: false
     <div class="resource-title"><a href="https://www.overleaf.com/read/dcsmqdxcfzwm#933681">Working Paper Template (Overleaf)</a></div>
     <div class="resource-desc">Base template for drafts.</div>
   </li>
+  <li class="resource-item">
+    <div class="resource-title"><a href="https://www.overleaf.com/read/wymwxzsvhdmn#3008a2">Beamer Template (Overleaf)</a></div>
+    <div class="resource-desc">Adapted from the original UF-style template created by <a href="https://estradaarzamendi.com">Carlos T. Estrada A</a>. This version has been revised for my own use.</div>
+  </li>
 </ul>
 
 ### Trade Data
