@@ -11,78 +11,26 @@ locale                   : "en-US"
 site_theme               : "default"
 title                    : "Yonggeun Jung"
 title_separator          : "-"
-name                     : &name "Yonggeun Jung"
-description              : &description ""
-url                      : https://yonggeun-jung.github.io/ # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
+name                     : "Yonggeun Jung"
+description              : "Ph.D. student in Economics at the University of Florida. Research interests include international trade, industrial organization, and computational economics."
+url                      : https://yonggeun-jung.github.io/
+baseurl                  : ""
 repository               : "https://github.com/Yonggeun-Jung/yonggeun-jung.github.io"
+og_image                 : "/images/yonggeun_profile.JPG"
 
-# Site Author - The following control what appear as part of the author content on the side bar.
-#               If a field is blank the icon and link will not appear, otherwise it will be shown.
-#               Additional customization can be done by editing /_includes/author-profile.html
+# Author — minimal layout; author-profile.html (legacy) uses the same keys when present.
 author:
-  # Biographic information
   avatar           : "yonggeun_profile.JPG"
   name             : "Yonggeun Jung"
-  pronouns         : # example: "she/her"  
   bio              : "Economics | Isaiah 55:8-9"
   tagline          : "Economics"
   verse            : "Isaiah 55:8-9"
-  location         : #
   employer         : "University of Florida"
-  uri              : # URL
-  email            : "yonggeun.jung@ufl.edu" 
-
-  # Academic websites
-  arxiv            : # URL - Update with the correct link to your profile
+  email            : "yonggeun.jung@ufl.edu"
   googlescholar    : "https://scholar.google.com/citations?user=BxcjkOoAAAAJ&hl=ko"
-  impactstory      : # URL
   orcid            : "https://orcid.org/0009-0006-8307-0208"
-  semantic         : # URL
-  pubmed           : #
-  researchgate     : # URL
-  scopus           : # URL
-
-  # Repositories and software development
-  bitbucket        : # Username - Update with your username on the site
-  codepen          : # Username
-  dribbble         : # Username
   github           : "Yonggeun-Jung"
-  kaggle           : # Username  
-  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
-
-  # Social media
-  bluesky          : # Replace this with you Bluesky username
-  facebook         : # Username
-  flickr           : # Username
-  foursquare       : # Username
-  goodreads        : # Username
-  google_plus      : # Username
-  keybase          : # Username
-  instagram        : #
-  lastfm           : # Username
   linkedin         : "yonggeun-jung-517674336"
-  mastodon         : # URL
-  medium           : # URL
-  pinterest        : # Username
-  soundcloud       : # Username
-  steam            : # Username
-  telegram         : # URL
-  tumblr           : # Username
-  twitter          : # Username for X / Twitter
-  vine             : # Username
-  weibo            : # Username
-  wikipedia        : # Username
-  xing             : # Username
-  youtube          : # Username
-  zhihu            : # Username
-
-# Publication Category - The following the list of publication categories and their headings
-#publication_category:
-#  refereed:
-#    title: "Refereed Publications"
-#  wip:
-#    title: "Work in Progress"
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -92,31 +40,8 @@ future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
-  disqus:
-    shortname            :
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+  provider               :
+
 atom_feed:
   hide                   : false     # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
@@ -129,25 +54,22 @@ alexa_site_verification  :
 yandex_site_verification :
 
 
-# Social Sharing
+# Social Sharing (legacy Minimal Mistakes / SEO include)
 twitter:
-  username               : &twitter
+  username               :
 facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   :
+  name                   :
+  links                  : []
 
 
-# Analytics
+# Analytics (leave provider blank to disable)
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               :
   google:
     tracking_id          :
 
@@ -211,25 +133,8 @@ kramdown:
   enable_coderay: false
 
 
-# These settings control the types of collections used by the template
-collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  #publications:
-  #  output: true
-  #  permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
-
-
-# These settings control how pages and collections are included in the site
+# No custom collections (teaching/portfolio/talks removed — not used).
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
@@ -237,51 +142,15 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: false
       share: true
       related: true
-  # _pages
   - scope:
       path: ""
       type: pages
     values:
       layout: single
       author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
-  #- scope:
-  #    path: ""
-  #    type: publications
-  #  values:
-  #    layout: single
-  #    author_profile: true
-  #    share: true
-  #    comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
 
 
 # Sass/SCSS
