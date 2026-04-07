@@ -70,3 +70,10 @@
   abstract: "This paper re-evaluates the entry framework of Bresnahan and Reiss (1991) by relaxing their assumption that fixed costs are non-decreasing in the number of firms. We introduce a tractable specification that accommodates both congestion and agglomeration economies. Re-estimating BR's original tire dealer data confirms that fixed costs increase with entry. Extending the analysis to 85 retail and service industries using 2005 County Business Patterns data across 582 isolated rural markets, we provide broad empirical validation for Bresnahan and Reiss (1991)'s assumption: in isolated local economies, congestion universally dominates agglomeration, and the observed convergence of entry thresholds can be unambiguously attributed to competitive saturation."
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6451483"
   replication_url: "https://github.com/yonggeun-jung/fixed_cost_BR1991"
+
+- citation: "When Are Sufficient Statistics Sufficient? Bounding the Approximation Error in Gains-from-Trade Formulas"
+  citation_lead: "When Are Sufficient Statistics Sufficient? Bounding the Approximation Error in Gains-from-Trade Formulas"
+  citation_rest: ""
+  abstract: "The welfare formula of Arkolakis et al. (2012) is widely used to evaluate the gains from trade, but its validity rests on the assumption that productivity distributions are exactly Fréchet or Pareto. Empirical distributions systematically violate this requirement, introducing an approximation error of unknown magnitude. We derive strict upper bounds on this error for both the Eaton-Kortum and Melitz model classes, the two workhorses of modern quantitative trade analysis. The bounds depend solely on the variation of the trade elasticity across trade cost levels, an object directly estimable from standard gravity regressions without firm-level data, providing researchers with a practical tool to assess the reliability of their welfare calculations."
+  url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6537458"
+  replication_url: "https://github.com/yonggeun-jung/ACR_2012_approximation_public"
