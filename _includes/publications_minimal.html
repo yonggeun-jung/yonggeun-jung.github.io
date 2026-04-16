@@ -79,13 +79,16 @@
           {% endif %}
         </div>
 
-        {% if pub.abstract or pub.replication_url or pub.slides_url %}
+        {% if pub.abstract or pub.summary_url or pub.replication_url or pub.slides_url %}
         <div class="pub-meta-row">
           {% if pub.abstract %}
             <details class="abs-details">
               <summary class="pub-aux-link">Abstract</summary>
               <div class="abstract-box">{{ pub.abstract }}</div>
             </details>
+          {% endif %}
+          {% if pub.summary_url %}
+            <a href="{{ pub.summary_url }}" class="pub-aux-link" target="_blank" rel="noopener">Summary</a>
           {% endif %}
           {% if pub.replication_url %}
             <a href="{{ pub.replication_url }}" class="pub-aux-link" target="_blank" rel="noopener">Replication</a>
