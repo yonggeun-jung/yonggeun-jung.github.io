@@ -87,14 +87,14 @@
               <div class="abstract-box">{{ pub.abstract }}</div>
             </details>
           {% endif %}
-          {% if pub.summary_url %}
-            <a href="{{ pub.summary_url }}" class="pub-aux-link" target="_blank" rel="noopener">Summary</a>
-          {% endif %}
           {% if pub.replication_url %}
             <a href="{{ pub.replication_url }}" class="pub-aux-link" target="_blank" rel="noopener">Replication</a>
           {% endif %}
           {% if pub.slides_url %}
             <a href="{{ pub.slides_url }}" class="pub-aux-link" target="_blank" rel="noopener">Slides</a>
+          {% endif %}
+          {% if pub.summary_url %}
+            <a href="{{ pub.summary_url }}" class="pub-aux-link" target="_blank" rel="noopener">AI Summary</a>
           {% endif %}
         </div>
         {% endif %}
