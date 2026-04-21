@@ -72,9 +72,9 @@
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6451483"
   replication_url: "https://github.com/yonggeun-jung/fixed_cost_BR1991"
 
-- citation: "When Are Sufficient Statistics Sufficient? Bounding the Approximation Error in Gains-from-Trade Formulas"
-  citation_lead: "When Are Sufficient Statistics Sufficient? Bounding the Approximation Error in Gains-from-Trade Formulas"
+- citation: "When Are Sufficient Statistics Sufficient? Bounding Gains-from-Trade Formulas with an Application to NAFTA"
+  citation_lead: "When Are Sufficient Statistics Sufficient? Bounding Gains-from-Trade Formulas with an Application to NAFTA"
   citation_rest: ""
-  abstract: "The welfare formula of Arkolakis et al. (2012) is widely used to evaluate the gains from trade, but its validity rests on the assumption that productivity distributions are exactly Fréchet or Pareto. Empirical distributions systematically violate this requirement, introducing an approximation error of unknown magnitude. We derive strict upper bounds on this error for both the Eaton-Kortum and Melitz model classes, the two workhorses of modern quantitative trade analysis. The bounds depend solely on the variation of the trade elasticity across trade cost levels, an object directly estimable from standard gravity regressions without firm-level data, providing researchers with a practical tool to assess the reliability of their welfare calculations."
+  abstract: "The welfare formula of Arkolakis et al. (2012) (ACR) is applied throughout two classes of models, Eaton–Kortum (EK) and Melitz, both of which are built on specific distributional assumptions: Fréchet in EK, Pareto in Melitz. When these assumptions are violated, the four ACR macro-restrictions still hold, but the trade elasticity is no longer constant, and the ACR formula, which assumes a single elasticity, acquires an approximation error. We derive strict upper bounds on this error for both classes. The bounds depend only on the curvature of the gravity equation and are estimable without firm-level data. Applied to the NAFTA calculation of Caliendo and Parro (2015), the Fréchet assumption introduces non-negligible uncertainty concentrated in agriculture but does not overturn their conclusions."
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6537458"
   replication_url: "https://github.com/yonggeun-jung/ACR_2012_approximation_public"
