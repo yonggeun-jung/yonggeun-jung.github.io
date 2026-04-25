@@ -34,7 +34,7 @@ author_profile: false
   <li class="resource-item">
     <div class="resource-title"><a href="https://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=8">CEPII Gravity Database</a></div>
     <div class="resource-desc">Standard gravity dataset (1948–2020).</div>
-    <div class="resource-related"><span class="resource-label">Related paper:</span> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6537458">When Are Sufficient Statistics Sufficient? Bounding the Approximation Error in Gains-from-Trade Formulas</a></div>
+    <div class="resource-related"><span class="resource-label">Related paper:</span> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6537458">When Are Sufficient Statistics Sufficient? Bounding Gains-from-Trade Formulas with an Application to NAFTA</a></div>
   </li>
   <li class="resource-item">
     <div class="resource-title"><a href="https://www.oecd.org/en/topics/sub-issues/trade-in-value-added.html">OECD TiVA (Trade in Value-Added)</a></div>
