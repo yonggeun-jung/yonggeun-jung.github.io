@@ -190,6 +190,7 @@ section.site-main {
 
 nav.back-to-home {
   margin: 0 0 1.1rem;
+  text-align: right;
 }
 
 section.site-main .site-lead {
