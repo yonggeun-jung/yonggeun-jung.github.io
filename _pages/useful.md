@@ -62,7 +62,7 @@ author_profile: false
   </li>
   <li class="resource-item">
     <div class="resource-title"><a href="https://www.chicagobooth.edu/research/kilts/research-data">Chicago Booth Kilts - Research Data</a></div>
-    <div class="resource-desc">Includes Nielsen-type data access options; many datasets require subscription/eligibility.</div>
+    <div class="resource-desc">Includes Nielsen-type data access options; Datasets require subscription/eligibility.</div>
     <div class="resource-related"><span class="resource-label">Used in:</span> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6121267">Cross-category Portfolio and Bargaining Power: Evidence from the US Men's Razor Market</a></div>
   </li>
 </ul>
