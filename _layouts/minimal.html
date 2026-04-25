@@ -69,6 +69,11 @@
     </header>
 
     <section class="site-main">
+      {% if page.path == '_pages/useful.md' or page.path == '_pages/personal.html' or page.url == '/resources/' or page.url == '/personal/' %}
+      <nav class="back-to-home" aria-label="Site">
+        <a class="nav-site-link" href="{{ '/' | relative_url }}">← Home</a>
+      </nav>
+      {% endif %}
       {{ content }}
     </section>
 

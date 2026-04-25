@@ -188,6 +188,10 @@ section.site-main {
   color: #3f4a5a;
 }
 
+nav.back-to-home {
+  margin: 0 0 1.1rem;
+}
+
 section.site-main .site-lead {
   font-size: 15px;
   line-height: 1.55;
