@@ -50,6 +50,7 @@
   citation_rest: ""
   abstract: "Satellite data are increasingly used to measure economic activity, yet port-level trade remains largely unmeasured from space. This paper combines synthetic aperture radar imagery, nighttime lights, and port characteristics to measure monthly port-level maritime trade using only publicly available data. The model achieves strong out-of-sample accuracy for U.S. ports, with satellite signals and port attributes playing complementary roles. While absolute levels are difficult to extrapolate beyond the training domain, percentage changes are reliably recovered, as we confirm through a leave-one-region-out exercise and Monte Carlo simulation. Applying the framework to Russian ports after the 2022 sanctions, we detect shifts consistent with trade reorientation toward the Far East. The approach complements AIS-based methods by remaining robust to strategic signal manipulation."
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984017"
+  summary_url: "https://gist.science/paper/2604.15444"
   replication_url: "https://github.com/yonggeun-jung/watching_trade_public"
 
 - citation: "Replicating Political Economy Weights in Ossa (2014): An Optimization-based Alternative"
