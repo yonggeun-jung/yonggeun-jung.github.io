@@ -47,7 +47,6 @@ author_profile: false
 </div>
 
 
-<!-- Leaflet + Glider -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -57,7 +56,7 @@ author_profile: false
   const visitedCountries = [
     "South Korea", "China", "Russia", "Kazakhstan", "Uzbekistan", "Georgia", "Azerbaijan",
     "Turkey", "Ukraine", "Germany", "Czechia", "Austria", "Slovenia", "Hungary",
-    "France", "Spain", "United Kingdom", "Switzerland", "United States of America", "Japan", "Indonesia"
+    "France", "Spain", "United Kingdom", "Switzerland", "United States of America", "Mexico", "Japan", "Indonesia"
   ];
 
   const map = L.map('visited-map').setView([30, 10], 2);
@@ -109,27 +108,23 @@ author_profile: false
 </script>
 
 <style>
-  /* 전체 컨테이너 */
   .sliders-wrapper {
     display: flex;
-    gap: 2em; /* 데스크톱에서는 gap 사용 */
+    gap: 2em;
     margin-bottom: 4em;
   }
 
-  /* 개별 슬라이더 그룹 */
   .slider-item {
     flex: 1;
-    min-width: 0; 
+    min-width: 0;
   }
 
-  /* 슬라이더의 틀 */
   .glider-contain {
     width: 100%; 
     height: 400px;
     position: relative;
   }
 
-  /* 슬라이드 이미지 관련 스타일 */
   .img-wrap {
     width: 100%;
     height: 100%;
@@ -143,7 +138,6 @@ author_profile: false
     object-fit: contain;
   }
 
-  /* 화살표 버튼 */
   .glider-prev,
   .glider-next {
     position: absolute;
@@ -159,16 +153,14 @@ author_profile: false
   .glider-prev { left: -10px; }
   .glider-next { right: -10px; }
 
-  /* 모바일 반응형 처리 */
   @media (max-width: 768px) {
     .sliders-wrapper {
-      flex-direction: column; /* 세로로 쌓기 */
-      gap: 0; /* 모바일에서는 flex gap을 사용하지 않음 */
+      flex-direction: column;
+      gap: 0;
     }
-    
-    /* ▼▼▼ 이 코드가 겹침 문제를 해결합니다 ▼▼▼ */
+
     .slider-item + .slider-item {
-      margin-top: 6em; /* 두 번째 슬라이더에 위쪽 여백을 직접 추가 */
+      margin-top: 6em;
     }
   }
 </style>
