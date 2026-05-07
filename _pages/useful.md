@@ -89,7 +89,7 @@ author_profile: false
   <li class="resource-item">
     <div class="resource-title"><a href="https://fred.stlouisfed.org/">FRED</a></div>
     <div class="resource-desc">Macroeconomic and financial time series.</div>
-    <div class="resource-related"><span class="resource-label">Used in:</span> <a href="https://arxiv.org/abs/2506.14078">Machine Learning-Based Estimation of Monthly GDP</a></div>
+    <div class="resource-related"><span class="resource-label">Used in:</span> <a href="https://arxiv.org/abs/2506.14078">Temporal Disaggregation of GDP: When Does Machine Learning Help?</a></div>
   </li>
   <li class="resource-item">
     <div class="resource-title"><a href="https://wrds-www.wharton.upenn.edu/">WRDS (Wharton Research Data Services)</a></div>
