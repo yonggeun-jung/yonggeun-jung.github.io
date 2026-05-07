@@ -10,7 +10,6 @@
   citation_rest: ""
   abstract: "Satellite data are increasingly used to measure economic activity, yet port-level trade remains largely unmeasured from space. This paper combines synthetic aperture radar imagery, nighttime lights, and port characteristics to measure monthly port-level maritime trade using only publicly available data. The model achieves strong out-of-sample accuracy for U.S. ports, with satellite signals and port attributes playing complementary roles. While absolute levels are difficult to extrapolate beyond the training domain, percentage changes are reliably recovered, as we confirm through a leave-one-region-out exercise and Monte Carlo simulation. Applying the framework to Russian ports after the 2022 sanctions, we detect shifts consistent with trade reorientation toward the Far East. The approach complements AIS-based methods by remaining robust to strategic signal manipulation."
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984017"
-  summary_url: "https://gist.science/paper/2604.15444"
   replication_url: "https://github.com/yonggeun-jung/watching_trade_public"
 
 - citation: "Cross-category Portfolio and Bargaining Power: Evidence from the US Men's Razor Market"
@@ -65,7 +64,6 @@
   citation_lead: "Temporal Disaggregation of GDP: When Does Machine Learning Help?"
   abstract: "We propose a modular framework for temporal disaggregation of quarterly GDP into monthly frequency, in which the regression step accommodates any supervised learning model while Mariano-Murasawa reconciliation enforces quarterly consistency. Comparing Chow-Lin, Elastic Net, XGBoost, and a Multi-Layer Perceptron across four countries, we find that regularization, not nonlinearity, drives the gains: Elastic Net achieves R<sup>2</sup> = 0.87 for the United States when lagged indicators are included, while nonlinear models cannot overcome the variance cost of small quarterly samples. We formalize this tradeoff through regime-switching bias and ridge-regularization results."
   url: "https://arxiv.org/abs/2506.14078"
-  summary_url: "https://gist.science/paper/2506.14078"
   replication_url: "https://github.com/Yonggeun-Jung/monthly_gdp"
 
 - citation: "Immigration, Value-Added Exports, and Global Value Chains in Korea, Bank of Korea Economic Analysis, 30(2), June 2024, 79-114."
