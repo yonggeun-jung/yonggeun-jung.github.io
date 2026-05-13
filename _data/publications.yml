@@ -52,6 +52,12 @@
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5631250"
   replication_url: "https://www.dropbox.com/scl/fo/9xq6r5yn4d03wq4844qs4/AE6s448JYpFnthZi9eY0y4U?rlkey=ltrv4x5y9n5k49baom4joz80p&st=jmo9qt28&dl=0"
 
+- citation: "Temporal Disaggregation of GDP: When Does Machine Learning Help?"
+  citation_lead: "Temporal Disaggregation of GDP: When Does Machine Learning Help?"
+  abstract: "We propose a modular framework for temporal disaggregation of quarterly GDP into monthly frequency, in which the regression step accommodates any supervised learning model while Mariano-Murasawa reconciliation enforces quarterly consistency. Comparing Chow-Lin, Elastic Net, XGBoost, and a Multi-Layer Perceptron across four countries, we find that regularization, not nonlinearity, drives the gains: Elastic Net achieves R<sup>2</sup> = 0.87 for the United States when lagged indicators are included, while nonlinear models cannot overcome the variance cost of small quarterly samples. We formalize this tradeoff through regime-switching bias and ridge-regularization results."
+  url: "https://arxiv.org/abs/2506.14078"
+  replication_url: "https://github.com/Yonggeun-Jung/monthly_gdp"
+
 - citation: "TGIF: A Quasi-Experimental Analysis of Pre-Weekend Productivity, Bank of Korea Economic Analysis, 31(3), September 2025, 33-67."
   citation_lead: "TGIF: A Quasi-Experimental Analysis of Pre-Weekend Productivity"
   citation_rest: ", *Bank of Korea Economic Analysis*, 31(3), September 2025, 33-67."
@@ -59,12 +65,6 @@
   url: "https://www.dropbox.com/scl/fi/kgs1uth7no8fdj8qo1tec/TGIF__A_Quasi_Experimental_Analysis_revised_Sep_2025.pdf?rlkey=ltxf847rjp60ao1c0v55gtmn9&st=csezr573&dl=0"
   replication_url: "https://www.dropbox.com/scl/fo/ea8n7u3i24sa83kaalype/AHQmSR6f-JGAKQlu82M7thc?rlkey=gvyofz4drk7x1ntwpwf5754eo&st=pou84ty7&dl=0"
   slides_url: "https://www.dropbox.com/scl/fi/9r01glekw4zhd4xsye4et/TGIF__A_Quasi_Experimental_Analysis_Presentation.pdf?rlkey=hu0gb8gn9wd0oj0956a2t0zvd&st=c1ctormo&dl=0"
-
-- citation: "Temporal Disaggregation of GDP: When Does Machine Learning Help?"
-  citation_lead: "Temporal Disaggregation of GDP: When Does Machine Learning Help?"
-  abstract: "We propose a modular framework for temporal disaggregation of quarterly GDP into monthly frequency, in which the regression step accommodates any supervised learning model while Mariano-Murasawa reconciliation enforces quarterly consistency. Comparing Chow-Lin, Elastic Net, XGBoost, and a Multi-Layer Perceptron across four countries, we find that regularization, not nonlinearity, drives the gains: Elastic Net achieves R<sup>2</sup> = 0.87 for the United States when lagged indicators are included, while nonlinear models cannot overcome the variance cost of small quarterly samples. We formalize this tradeoff through regime-switching bias and ridge-regularization results."
-  url: "https://arxiv.org/abs/2506.14078"
-  replication_url: "https://github.com/Yonggeun-Jung/monthly_gdp"
 
 - citation: "Immigration, Value-Added Exports, and Global Value Chains in Korea, Bank of Korea Economic Analysis, 30(2), June 2024, 79-114."
   citation_lead: "Immigration, Value-Added Exports, and Global Value Chains in Korea"
