@@ -2,7 +2,8 @@ html[data-theme="dark"] {
   color-scheme: dark;
   --pub-link-blue: #5eb8e8;
   --pub-link-blue-hover: #8ecff5;
-  --color-text: #e5e7eb;
+  --color-prose: #e5e7eb;
+  --color-text: #f1f5f9;
   --color-accent: #f0a0a0;
   --color-accent-hover: #f5bcbc;
   --color-muted: #94a3b8;
@@ -11,7 +12,7 @@ html[data-theme="dark"] {
 html[data-theme="dark"] body,
 html[data-theme="dark"] body.minimal-site {
   background-color: #0f1419;
-  color: var(--color-text);
+  color: var(--color-prose);
 }
 
 html[data-theme="dark"] h1,
@@ -131,8 +132,19 @@ html[data-theme="dark"] .mail-link:hover {
 }
 
 html[data-theme="dark"] section.site-main,
-html[data-theme="dark"] .publication-section {
-  color: var(--color-text);
+html[data-theme="dark"] section.site-main .site-lead,
+html[data-theme="dark"] .publication-section,
+html[data-theme="dark"] .pub-title-line .citation-rest,
+html[data-theme="dark"] .pub-title-line .citation-rest em,
+html[data-theme="dark"] .pub-title-line .citation-with,
+html[data-theme="dark"] .pub-title-line .coauthor-sep,
+html[data-theme="dark"] .pub-title-line .citation-coauthor-name,
+html[data-theme="dark"] .wip-section .wip-line,
+html[data-theme="dark"] .wip-section .wip-title,
+html[data-theme="dark"] .wip-section .coauthor-sep,
+html[data-theme="dark"] .wip-section .citation-coauthor-name,
+html[data-theme="dark"] .abstract-box {
+  color: var(--color-prose);
 }
 
 html[data-theme="dark"] .home-nav-center .nav-sep {
@@ -154,7 +166,6 @@ html[data-theme="dark"] .pub-wip-divider {
 html[data-theme="dark"] .abstract-box {
   background: #1e293b;
   border-left-color: #475569;
-  color: var(--color-text);
 }
 
 html[data-theme="dark"] .theme-toggle-btn {

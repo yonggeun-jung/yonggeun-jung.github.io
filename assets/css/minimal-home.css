@@ -6,7 +6,8 @@
 :root {
   --pub-link-blue: #0f83c6;
   --pub-link-blue-hover: #0a6aa8;
-  --color-text: #1a1a1a;
+  --color-prose: #595959;
+  --color-text: #222;
   --color-accent: #e57373;
   --color-accent-hover: #d65a5a;
   --color-muted: #9ca3af;
@@ -21,7 +22,7 @@
 body.minimal-site {
   font-size: 15px;
   line-height: 1.55;
-  color: var(--color-text);
+  color: var(--color-prose);
   padding: 40px 36px 60px;
 }
 
@@ -198,7 +199,7 @@ header.site-sidebar h1.site-name {
 /* Main column — same base size as publication titles */
 section.site-main {
   font-size: 15px;
-  color: var(--color-text);
+  color: var(--color-prose);
 }
 
 nav.back-to-home {
@@ -209,6 +210,7 @@ nav.back-to-home {
 section.site-main .site-lead {
   font-size: 15px;
   line-height: 1.55;
+  color: var(--color-prose);
 }
 
 section.site-main > p:first-of-type {

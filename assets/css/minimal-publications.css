@@ -1,9 +1,9 @@
-/* Publications — 3-color system: blue links, red aux/nav, black body text */
+/* Publications — blue links, red aux/nav, prose-colored body text */
 
 .publication-section {
   font-size: 15px;
   line-height: 1.55;
-  color: var(--color-text);
+  color: var(--color-prose);
 }
 
 .publication-section .section-title {
@@ -42,7 +42,6 @@
   font-size: 15px;
   line-height: 1.55;
   font-weight: 400;
-  color: var(--color-text);
 }
 
 a.citation-lead-link {
@@ -61,11 +60,16 @@ a.citation-lead-link:hover {
   font-weight: 400;
 }
 
-.citation-rest,
-.citation-with,
-.coauthor-sep,
-.citation-coauthor-name {
-  color: var(--color-text);
+.pub-title-line .citation-rest,
+.pub-title-line .citation-rest em,
+.pub-title-line .citation-with,
+.pub-title-line .coauthor-sep,
+.pub-title-line .citation-coauthor-name,
+.wip-section .wip-line,
+.wip-section .wip-title,
+.wip-section .coauthor-sep,
+.wip-section .citation-coauthor-name {
+  color: var(--color-prose);
   font-weight: 400;
 }
 
@@ -153,18 +157,12 @@ summary.pub-aux-link:hover {
   line-height: 1.5;
   border-left: 3px solid #e5e7eb;
   background: #f9fafb;
-  color: var(--color-text);
+  color: var(--color-prose);
 }
 
 .wip-section {
   margin: 0.35em 0 0;
   font-size: 15px;
-  color: var(--color-text);
-}
-
-.wip-line,
-.wip-title {
-  color: var(--color-text);
 }
 
 .wip-line {
