@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="{% if site.locale %}{{ site.locale | slice: 0, 2 }}{% else %}en{% endif %}">
 <head>
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title != nil and page.title != '' %}{{ page.title }} | {% endif %}{{ site.title }}</title>
@@ -29,6 +38,7 @@
   <link rel="stylesheet" href="{{ '/assets/css/academicons.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/minimal-home.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/minimal-publications.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/minimal-dark.css' | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon-180x180.png' | relative_url }}">
   <link rel="icon" type="image/png" href="{{ '/images/favicon-32x32.png' | relative_url }}" sizes="32x32">
   <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}">
@@ -63,6 +73,11 @@
         {% if _linkedin != '' %}
           <a href="https://www.linkedin.com/in/{{ _linkedin }}" class="site-icon-link site-icon-linkedin" title="LinkedIn" rel="noopener">{% include icon-linkedin.html %}<span class="visually-hidden">LinkedIn</span></a>
         {% endif %}
+        <button type="button" id="theme-toggle" class="theme-toggle-btn site-icon-link" aria-label="Switch to dark mode" title="Switch to dark mode">
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12Zm0-16h0M12 22h0M4.22 4.22h0M19.78 19.78h0M2 12h0M22 12h0M4.22 19.78h0M19.78 4.22h0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="visually-hidden">Toggle color theme</span>
+        </button>
       </p>
 
       <p class="site-email"><a class="mail-link" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
@@ -83,5 +98,6 @@
     </footer>
   </div>
   <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/minimal-theme.js' | relative_url }}"></script>
 </body>
 </html>

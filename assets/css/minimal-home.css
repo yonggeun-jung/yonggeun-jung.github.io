@@ -5,6 +5,11 @@
 
 :root {
   --pub-link-blue: #0f83c6;
+  --pub-link-blue-hover: #0a6aa8;
+  --color-text: #1a1a1a;
+  --color-accent: #e57373;
+  --color-accent-hover: #d65a5a;
+  --color-muted: #9ca3af;
 }
 
 .wrapper::after {
@@ -16,7 +21,7 @@
 body.minimal-site {
   font-size: 15px;
   line-height: 1.55;
-  color: #3f4a5a;
+  color: var(--color-text);
   padding: 40px 36px 60px;
 }
 
@@ -41,7 +46,7 @@ header.site-sidebar h1.site-name {
   font-size: 2.05rem;
   font-weight: 600;
   letter-spacing: -0.02em;
-  color: #1e293b;
+  color: var(--color-text);
   margin: 0 0 14px;
   line-height: 1.15;
 }
@@ -149,8 +154,16 @@ header.site-sidebar h1.site-name {
   color: #004182 !important;
 }
 
+.site-icon-row .theme-toggle-btn {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
 .site-icon-linkedin .linkedin-icon {
   display: block;
+  width: 20px;
+  height: 20px;
 }
 
 .site-email {
@@ -167,7 +180,7 @@ header.site-sidebar h1.site-name {
 }
 
 .mail-link:hover {
-  color: #0a6aa8;
+  color: var(--pub-link-blue-hover);
 }
 
 .visually-hidden {
@@ -185,7 +198,7 @@ header.site-sidebar h1.site-name {
 /* Main column — same base size as publication titles */
 section.site-main {
   font-size: 15px;
-  color: #3f4a5a;
+  color: var(--color-text);
 }
 
 nav.back-to-home {
@@ -203,7 +216,7 @@ section.site-main > p:first-of-type {
 }
 
 section.site-main strong {
-  color: #1e293b;
+  color: var(--color-text);
 }
 
 .home-nav-center {
@@ -213,12 +226,12 @@ section.site-main strong {
 }
 
 .nav-site-link {
-  color: #e57373;
+  color: var(--color-accent);
   text-decoration: none;
 }
 
 .nav-site-link:hover {
-  color: #d65a5a;
+  color: var(--color-accent-hover);
 }
 
 .home-nav-center .nav-sep {
@@ -276,7 +289,7 @@ footer.site-footer-minimal a {
 }
 
 .resource-label {
-  color: #e57373;
+  color: var(--color-accent);
 }
 
 @media print, screen and (max-width: 960px) {

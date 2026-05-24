@@ -60,27 +60,69 @@ author_profile: false
   ];
 
   const map = L.map('visited-map').setView([30, 10], 2);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  const lightTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
+  });
+  const darkTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
+  });
 
-  fetch('https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson')
-    .then(res => res.json())
-    .then(data => {
-      L.geoJSON(data, {
-        style: feature => ({
-          fillColor: visitedCountries.includes(feature.properties.name) ? "#0074D9" : "#ddd",
-          weight: 1,
-          color: "#999",
-          fillOpacity: visitedCountries.includes(feature.properties.name) ? 0.7 : 0.2
-        }),
+  function isDarkTheme() {
+    return document.documentElement.getAttribute('data-theme') === 'dark';
+  }
+
+  function applyMapTheme() {
+    const active = isDarkTheme() ? darkTiles : lightTiles;
+    const inactive = isDarkTheme() ? lightTiles : darkTiles;
+    if (map.hasLayer(inactive)) map.removeLayer(inactive);
+    if (!map.hasLayer(active)) active.addTo(map);
+    if (countriesLayer) {
+      countriesLayer.eachLayer(function (layer) {
+        const isVisited = visitedCountries.includes(layer.feature.properties.name);
+        layer.setStyle(countryStyle(isVisited));
+      });
+    }
+  }
+
+  function countryStyle(isVisited) {
+    if (isDarkTheme()) {
+      return {
+        fillColor: isVisited ? '#0074D9' : '#334155',
+        weight: 1,
+        color: isVisited ? '#64748b' : '#475569',
+        fillOpacity: isVisited ? 0.75 : 0.35
+      };
+    }
+    return {
+      fillColor: isVisited ? '#0074D9' : '#ddd',
+      weight: 1,
+      color: '#999',
+      fillOpacity: isVisited ? 0.7 : 0.2
+    };
+  }
+
+  let countriesLayer;
+
+  function renderCountries(data) {
+    if (countriesLayer) map.removeLayer(countriesLayer);
+    countriesLayer = L.geoJSON(data, {
+        style: feature => countryStyle(visitedCountries.includes(feature.properties.name)),
         onEachFeature: (feature, layer) => {
           if (visitedCountries.includes(feature.properties.name)) {
             layer.bindPopup(feature.properties.name);
           }
         }
       }).addTo(map);
+  }
+
+  fetch('https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson')
+    .then(res => res.json())
+    .then(function (data) {
+      renderCountries(data);
+      applyMapTheme();
     });
+
+  document.addEventListener('themechange', applyMapTheme);
 
   window.addEventListener('load', function(){
     new Glider(document.querySelector('.glider.travel'), {

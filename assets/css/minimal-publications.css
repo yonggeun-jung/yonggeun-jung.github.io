@@ -1,19 +1,18 @@
-/* Publications — grid aligns Abstract with title; sizes; nav-colored aux links */
+/* Publications — 3-color system: blue links, red aux/nav, black body text */
 
 .publication-section {
   font-size: 15px;
   line-height: 1.55;
-  color: #3f4a5a;
+  color: var(--color-text);
 }
 
 .publication-section .section-title {
   margin: 0 0 0.75em;
   font-size: 1.15rem;
   font-weight: 600;
-  color: #1e293b;
+  color: var(--color-text);
 }
 
-/* Number | title+meta (meta aligns with title column) */
 .pub-card {
   display: grid;
   grid-template-columns: minmax(1.5em, auto) 1fr;
@@ -25,7 +24,7 @@
 .pub-num {
   grid-column: 1;
   grid-row: 1;
-  color: #9ca3af;
+  color: var(--color-muted);
   font-weight: 500;
   font-size: 0.95em;
   line-height: 1.55;
@@ -43,27 +42,30 @@
   font-size: 15px;
   line-height: 1.55;
   font-weight: 400;
+  color: var(--color-text);
 }
 
-/* Blue link = paper title only; rest black; hover bold on link only */
 a.citation-lead-link {
-  color: var(--pub-link-blue, #0f83c6);
+  color: var(--pub-link-blue);
   text-decoration: none;
   font-weight: 400;
 }
 
 a.citation-lead-link:hover {
   font-weight: 600;
-  color: var(--pub-link-blue, #0f83c6);
+  color: var(--pub-link-blue);
 }
 
 .citation-lead-plain {
-  color: var(--pub-link-blue, #0f83c6);
+  color: var(--pub-link-blue);
   font-weight: 400;
 }
 
-.citation-rest {
-  color: #1a1a1a;
+.citation-rest,
+.citation-with,
+.coauthor-sep,
+.citation-coauthor-name {
+  color: var(--color-text);
   font-weight: 400;
 }
 
@@ -71,34 +73,19 @@ a.citation-lead-link:hover {
   font-style: italic;
 }
 
-/* Co-author line after " with …" — gray, not part of title link (no hover bold) */
-.citation-with {
-  color: #6b7280;
-  font-weight: 400;
-}
-
 .citation-coauthor-link {
-  color: var(--pub-link-blue, #0f83c6);
+  color: var(--pub-link-blue);
   text-decoration: underline;
   text-decoration-color: rgba(15, 131, 198, 0.55);
   text-underline-offset: 0.18em;
-  font-weight: 400; /* keep coauthor names from becoming bold on hover */
+  font-weight: 400;
 }
 
 .citation-coauthor-link:hover {
   font-weight: 400;
-  color: var(--pub-link-blue, #0f83c6);
+  color: var(--pub-link-blue);
 }
 
-.coauthor-sep {
-  color: #6b7280;
-}
-
-.citation-coauthor-name {
-  color: #6b7280;
-}
-
-/* Divider before Work in Progress */
 .pub-wip-divider {
   border: 0;
   height: 1px;
@@ -110,7 +97,6 @@ a.citation-lead-link:hover {
   margin-top: 0;
 }
 
-/* Smaller row under title; same hue as Home | CV | Personal */
 .pub-meta-row {
   margin-top: 0.35em;
   display: flex;
@@ -119,7 +105,7 @@ a.citation-lead-link:hover {
   gap: 0.25rem 1rem;
   font-size: 0.88rem;
   line-height: 1.45;
-  color: #e57373;
+  color: var(--color-accent);
 }
 
 .abs-details {
@@ -145,13 +131,13 @@ a.citation-lead-link:hover {
 }
 
 .pub-meta-row .pub-aux-link {
-  color: #e57373;
+  color: var(--color-accent);
   text-decoration: none;
   font-weight: 500;
 }
 
 .pub-meta-row .pub-aux-link:hover {
-  color: #d65a5a;
+  color: var(--color-accent-hover);
   font-weight: 600;
 }
 
@@ -167,12 +153,18 @@ summary.pub-aux-link:hover {
   line-height: 1.5;
   border-left: 3px solid #e5e7eb;
   background: #f9fafb;
-  color: #334155;
+  color: var(--color-text);
 }
 
 .wip-section {
   margin: 0.35em 0 0;
   font-size: 15px;
+  color: var(--color-text);
+}
+
+.wip-line,
+.wip-title {
+  color: var(--color-text);
 }
 
 .wip-line {
@@ -187,41 +179,8 @@ summary.pub-aux-link:hover {
 
 .wip-num {
   display: block;
-  color: #9ca3af;
+  color: var(--color-muted);
   font-weight: 500;
   margin-right: 0;
   font-size: 0.95em;
-}
-
-@media (prefers-color-scheme: dark) {
-  .citation-rest {
-    color: #e5e7eb;
-  }
-
-  .citation-with {
-    color: #9ca3af;
-  }
-
-  .citation-coauthor-link {
-    color: var(--pub-link-blue, #0f83c6);
-    text-decoration-color: rgba(15, 131, 198, 0.55);
-  }
-
-  .coauthor-sep {
-    color: #9ca3af;
-  }
-
-  .citation-coauthor-name {
-    color: #9ca3af;
-  }
-
-  .pub-wip-divider {
-    background: #475569;
-  }
-
-  .abstract-box {
-    background: #1e2937;
-    border-left-color: #475569;
-    color: #e2e8f0;
-  }
 }
