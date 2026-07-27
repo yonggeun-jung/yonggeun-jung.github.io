@@ -34,7 +34,7 @@
 
 - citation: "Replicating Political Economy Weights in Ossa (2014): An Optimization-based Alternative"
   citation_lead: "Replicating Political Economy Weights in Ossa (2014): An Optimization-based Alternative"
-  citation_rest: ", R&R at *Journal of Applied Econometrics*. (Replication section)"
+  citation_rest: ", R&R at *Journal of Applied Econometrics*."
   abstract: "We replicate the political economy weights in Ossa (2014) using a Levenberg-Marquardt optimization framework. The optimization routine yields clearer firstorder optimality diagnostics, with Japan showing the most notable differences relative to the heuristic procedure, while most other countries display outcomes that are numerically close to the original implementation. Despite these differences in the underlying weights, the implied optimal tariff profiles remain highly stable across methods."
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6165906"
   replication_url: "https://github.com/yonggeun-jung/replication-ossa2014-peweights"
