@@ -25,10 +25,10 @@
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6537458"
   replication_url: "https://github.com/yonggeun-jung/ACR_2012_approximation_public"
 
-- citation: "Does Competition Really Saturate? Revisiting Bresnahan and Reiss (1991) with Structural Fixed Costs"
-  citation_lead: "Does Competition Really Saturate? Revisiting Bresnahan and Reiss (1991) with Structural Fixed Costs"
+- citation: "Does Competition Really Saturate? Fixed Costs and Entry Thresholds in Bresnahan and Reiss (1991)"
+  citation_lead: "Does Competition Really Saturate? Fixed Costs and Entry Thresholds in Bresnahan and Reiss (1991)"
   citation_rest: ""
-  abstract: "This paper re-evaluates the entry framework of Bresnahan and Reiss (1991) by relaxing their assumption that fixed costs are non-decreasing in the number of firms. We introduce a tractable specification that accommodates both congestion and agglomeration economies. Re-estimating BR's original tire dealer data confirms that fixed costs increase with entry. Extending the analysis to 85 retail and service industries using 2005 County Business Patterns data across 582 isolated rural markets, we provide broad empirical validation for Bresnahan and Reiss (1991)'s assumption: in isolated local economies, congestion universally dominates agglomeration, and the observed convergence of entry thresholds can be unambiguously attributed to competitive saturation."
+  abstract: "This paper asks what the sign restrictions of fixed costs in the entry-threshold framework of Bresnahan and Reiss (1991) identify. The threshold ratio is the product of fixed-cost and competition ratios, but the restrictions used to separate them are weaker than the threshold interpretation requires. We relax that restriction and estimate the model on 104 industries across 582 isolated rural counties. The fixed-cost gradient is positive in every industry under every restriction, but its magnitude falls by half when the margin premise is imposed. In simulations where entry changes nothing about the market and later entrants are simply less efficient, the estimator reports the same increase in fixed costs. Entry thresholds identify how fixed costs move with entry, not why they move."
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6451483"
   replication_url: "https://github.com/yonggeun-jung/fixed_cost_BR1991"
 
