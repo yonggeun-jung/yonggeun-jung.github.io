@@ -18,13 +18,6 @@
   abstract: "This paper studies how a manufacturer’s dominance in one product category affects its bargaining outcomes in another. Using data on the US shaving market, we develop a Nash bargaining framework and estimate a two-stage empirical model in which demand estimation informs the bargaining stage. We find that greater cross-category dominance, defined as the share of unit sales in non-focal categories, systematically increases negotiated shelf share, while larger retailers offset this effect. A counterfactual merger simulation between multi-category manufacturers shows that portfolio expansion reduces consumer welfare, with part of the loss stemming from reduced product variety. The results suggest that cross-category portfolio power can influence vertical negotiations beyond traditional price channels."
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6121267"
 
-- citation: "When Are Sufficient Statistics Sufficient? Bounding Gains-from-Trade Formulas with an Application to NAFTA"
-  citation_lead: "When Are Sufficient Statistics Sufficient? Bounding Gains-from-Trade Formulas with an Application to NAFTA"
-  citation_rest: ""
-  abstract: "The welfare formula of Arkolakis et al. (2012) (ACR) is applied throughout two classes of models, Eaton–Kortum (EK) and Melitz, both of which are built on specific distributional assumptions: Fréchet in EK, Pareto in Melitz. When these assumptions are violated, the four ACR macro-restrictions still hold, but the trade elasticity is no longer constant, and the ACR formula, which assumes a single elasticity, acquires an approximation error. We derive strict upper bounds on this error for both classes. The bounds depend only on the curvature of the gravity equation and are estimable without firm-level data. Applied to the NAFTA calculation of Caliendo and Parro (2015), the Fréchet assumption introduces non-negligible uncertainty concentrated in agriculture but does not overturn their conclusions."
-  url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6537458"
-  replication_url: "https://github.com/yonggeun-jung/ACR_2012_approximation_public"
-
 - citation: "Does Competition Really Saturate? Fixed Costs and Entry Thresholds in Bresnahan and Reiss (1991)"
   citation_lead: "Does Competition Really Saturate? Fixed Costs and Entry Thresholds in Bresnahan and Reiss (1991)"
   citation_rest: ""
