@@ -112,18 +112,15 @@ a.citation-lead-link:hover {
   color: var(--color-accent);
 }
 
+/* Let summary + abstract-box participate in .pub-meta-row flex,
+   so sibling links (Replication, Slides, …) stay on the first row. */
 .abs-details {
-  display: inline-block;
-}
-
-.abs-details[open] {
-  flex: 1 1 100%;
+  display: contents;
 }
 
 .abs-details > summary {
   list-style: none;
   cursor: pointer;
-  display: inline;
 }
 
 .abs-details > summary::-webkit-details-marker {
@@ -150,8 +147,10 @@ summary.pub-aux-link:hover {
 }
 
 .abstract-box {
-  display: block;
-  margin: 0.45em 0 0;
+  flex: 1 1 100%;
+  order: 100;
+  box-sizing: border-box;
+  margin: 0.1em 0 0;
   padding: 0.55em 0.75em;
   font-size: 0.88em;
   line-height: 1.5;
