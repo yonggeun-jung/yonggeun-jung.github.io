@@ -101,34 +101,35 @@ a.citation-lead-link:hover {
   margin-top: 0;
 }
 
-.pub-meta-row {
+.pub-meta {
   margin-top: 0.35em;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: baseline;
-  gap: 0.25rem 1rem;
   font-size: 0.88rem;
   line-height: 1.45;
   color: var(--color-accent);
 }
 
-/* Let summary + abstract-box participate in .pub-meta-row flex,
-   so sibling links (Replication, Slides, …) stay on the first row. */
-.abs-details {
-  display: contents;
+.pub-meta-row {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
 }
 
-.abs-details > summary {
-  list-style: none;
+/* Visually hide the checkbox; the label is the clickable control. */
+.abs-toggle-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.abs-toggle-label {
   cursor: pointer;
-}
-
-.abs-details > summary::-webkit-details-marker {
-  display: none;
-}
-
-.abs-details > summary::marker {
-  content: "";
 }
 
 .pub-meta-row .pub-aux-link {
@@ -142,21 +143,20 @@ a.citation-lead-link:hover {
   font-weight: 600;
 }
 
-summary.pub-aux-link:hover {
-  font-weight: 600;
-}
-
-.abstract-box {
-  flex: 1 1 100%;
-  order: 100;
-  box-sizing: border-box;
-  margin: 0.1em 0 0;
+/* Abstract sits below the link row; opening it does not move sibling links. */
+.pub-meta .abstract-box {
+  display: none;
+  margin: 0.45em 0 0;
   padding: 0.55em 0.75em;
   font-size: 0.88em;
   line-height: 1.5;
   border-left: 3px solid #e5e7eb;
   background: #f9fafb;
   color: var(--color-prose);
+}
+
+.pub-meta:has(.abs-toggle-input:checked) .abstract-box {
+  display: block;
 }
 
 .wip-section {
